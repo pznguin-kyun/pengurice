@@ -1,28 +1,33 @@
-# penguinRice
-A script that rice your Linux/*nix system.
+<h1 align="center">penguinRice</h1>
+<p align="center">A script that rice your Linux/*nix system.</a>
+
+<div align="center">
+<a href="#details">Details</a> -  
+<a href="#gallery">Gallery</a> - 
+<a href="#installation">Install</a> - 
+<a href="#credits">Credits</a>
+</div>
 
 penguinRice is for people who want to use a simple but fully functional Linux workflow
 
 <img src="https://i.imgur.com/6ReXidY.png" alt="penguinrice" align="right" height="240px">
 
-# 📦 Packages
-- 📁 Dotfiles: [penguinDotfiles](https://github.com/p3nguin-kun/penguinDotfiles)
-- 🪟 Window Manager: [bspwm](https://github.com/baskerville/bspwm)
-- 👨‍💻 Terminal: [Alacritty](https://alacritty.org/)
-- 🌐 Browser: [Firefox](https://www.mozilla.org/en-US/firefox)
-- 🗃️ File manager: [Ranger](https://ranger.github.io/)/[PCManFM](https://github.com/lxde/pcmanfm)
-- 🗒️ Text editor: [NeoVim](https://neovim.io)
-- 📄 PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
-- 📅 Calendar: [Calcurse](https://www.calcurse.org/)
-- 📼 Video player: [mpv](https://mpv.io)
-- 🎶 Music player: [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
-- 📜 Fetch: [Neofetch](https://github.com/dylanaraps/neofetch)
-- 🤖 System monitor: [Htop](https://htop.dev)
-- 🖥️ Manage screens: [ARandR](https://christian.amsuess.com/tools/arandr/)
-- 💴 Free Robux: [Here](https://youtu.be/dQw4w9WgXcQ)
+# Details
+- Dotfiles: [penguinDotfiles](https://github.com/p3nguin-kun/penguinDotfiles)
+- Window Manager: [bspwm](https://github.com/baskerville/bspwm)
+- Terminal: [alacritty](https://alacritty.org/)
+- Browser: [firefox](https://www.mozilla.org/en-US/firefox)
+- File Manager: [ranger](https://ranger.github.io/)/[pcmanfm](https://github.com/lxde/pcmanfm)
+- Text Editor: [neovim](https://neovim.io)
+- PDF Viewer: [zathura](https://pwmt.org/projects/zathura/)
+- Calendar: [calcurse](https://www.calcurse.org/)
+- Video player: [mpv](https://mpv.io)
+- Music player: [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
+- Fetch: [neofetch](https://github.com/dylanaraps/neofetch)
+- System monitor: [htop](https://htop.dev)
+- Manage screens: [arandr](https://christian.amsuess.com/tools/arandr/)
 
-# 🎨 Colorschemes
-There are 12 colorschemes included in my dotfiles, you can apply it by pressing `super + shift + c`
+# Gallery
 <details>
 <summary>Click to preview</summary>
 
@@ -38,14 +43,14 @@ There are 12 colorschemes included in my dotfiles, you can apply it by pressing 
 
 </details>
 
-# 💾 Supported distros
+# Installation
+## Distros
 - Arch Linux and Arch-based distros (EndeavourOS, Artix Linux, Arco Linux, ArchCraft, ...)
 - RedHat-based distros (RHEL, Fedora, Nobara, ...)
 - Debian and Debian-based distros (Ubuntu, Pop! OS, ...)
 - SUSE and openSUSE
 - Void Linux
 
-# 🛠️ Installation
 ## Install with git
 ```
 git clone --depth 1 https://github.com/p3nguin-kun/penguinRice
@@ -71,14 +76,15 @@ startx
 ```
 
 #  References
+
+
+# Credits
+- [Contributors](https://github.com/p3nguin-kun/penguinRice/graphs/contributors)
+- Some people on Discord
 - [penguinFox](https://github.com/p3nguin-kun/penguinFox): Firefox config
 - [mvim](https://github.com/p3nguin-kun/mvim): NeoVim config
 
-# 👨‍💻 Credits
-- [Contributors](https://github.com/p3nguin-kun/penguinRice/graphs/contributors)
-- Some people on Discord
-
-# ❤️ Contributions
+# Contributions
 1. Fork this project.
-2. Edit the scripts, add/edit the keybindings or something like that.
+2. Edit files
 3. Make a pull request.
