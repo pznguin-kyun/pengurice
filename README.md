@@ -1,13 +1,13 @@
 <h1 align="center">penguinRice</h1>
 <p align="center">A script that rice your Linux/*nix system.</a>
-
+<p>
 <div align="center">
 <a href="#details">Details</a> -  
 <a href="#gallery">Gallery</a> - 
 <a href="#installation">Install</a> - 
 <a href="#credits">Credits</a>
 </div>
-
+</p>
 penguinRice is for people who want to use a simple but fully functional Linux workflow
 
 <img src="https://i.imgur.com/6ReXidY.png" alt="penguinrice" align="right" height="240px">
