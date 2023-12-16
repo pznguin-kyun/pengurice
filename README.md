@@ -70,9 +70,6 @@ user: sudo ./penguinrice-linux.sh or su -c './penguinrice-linux.sh'
 startx
 ```
 
-# 📕 Wiki
-Read penguinRice's wiki [here](https://github.com/p3nguin-kun/penguinRice/wiki)
-
 #  References
 - [penguinFox](https://github.com/p3nguin-kun/penguinFox): Firefox config
 - [mvim](https://github.com/p3nguin-kun/mvim): NeoVim config
