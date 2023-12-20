@@ -193,6 +193,7 @@ prepare_folders(){
     mkdir -p /home/$username/.config/
     mkdir -p /home/$username/.fonts/
     mkdir -p /home/$username/.themes/
+    mkdir -p /home/$username/.icons/
     done_msg
 }
 
@@ -248,6 +249,7 @@ logo "Installing dotfiles.."
 printf "Copying files to respective directories..\n"
 cp -R /tmp/penguinDotfiles/config/* /home/$username/.config
 cp -R /tmp/penguinDotfiles/themes/* /home/$username/.themes
+cp -R /tmp/penguinDotfiles/icons/* /home/$username/.icons
 cp -R /tmp/penguinDotfiles/fonts/* /home/$username/.fonts
 cp -RT /tmp/penguinDotfiles/fonts/local/ /home/$username/.local/
 cp -RT /tmp/penguinDotfiles/home/ /home/$username
