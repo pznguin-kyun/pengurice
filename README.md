@@ -15,18 +15,18 @@ penguinRice is for people who want to use a simple but fully functional Linux se
 
 - Dotfiles: [penguinDotfiles](https://github.com/p3nguin-kun/penguinDotfiles)
 - Window Manager: [bspwm](https://github.com/baskerville/bspwm)
-- Terminal: [alacritty](https://alacritty.org/)
-- Browser: [firefox](https://www.mozilla.org/en-US/firefox)
-- File Manager: [ranger](https://ranger.github.io/)/[pcmanfm](https://github.com/lxde/pcmanfm)
-- Text Editor: [neovim](https://neovim.io)
-- PDF Viewer: [zathura](https://pwmt.org/projects/zathura/)
+- Terminal: [Alacritty](https://alacritty.org/)
+- Browser: [Firefox](https://www.mozilla.org/en-US/firefox)
+- File Manager: [Ranger](https://ranger.github.io/)/[pcmanfm](https://github.com/lxde/pcmanfm)
+- Text Editor: [NeoVim](https://neovim.io)
+- PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
 - RSS Reader: [Newsboat](https://newsboat.org/)
-- Calendar: [calcurse](https://www.calcurse.org/)
+- Calendar: [Calcurse](https://www.calcurse.org/)
 - Video player: [mpv](https://mpv.io)
 - Music player: [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
 - Fetch: [neofetch](https://github.com/dylanaraps/neofetch)
-- System monitor: [htop](https://htop.dev)
-- Manage screens: [arandr](https://christian.amsuess.com/tools/arandr/)
+- System monitor: [Htop](https://htop.dev)
+- Manage screens: [ARandR](https://christian.amsuess.com/tools/arandr/)
 
 # Gallery
 <details>
