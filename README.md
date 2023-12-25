@@ -20,6 +20,7 @@ penguinRice is for people who want to use a simple but fully functional Linux se
 - File Manager: [ranger](https://ranger.github.io/)/[pcmanfm](https://github.com/lxde/pcmanfm)
 - Text Editor: [neovim](https://neovim.io)
 - PDF Viewer: [zathura](https://pwmt.org/projects/zathura/)
+- RSS Reader: [Newsboat](https://newsboat.org/)
 - Calendar: [calcurse](https://www.calcurse.org/)
 - Video player: [mpv](https://mpv.io)
 - Music player: [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)

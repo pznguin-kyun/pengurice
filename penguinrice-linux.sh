@@ -159,27 +159,27 @@ install_pkgs(){
 }
 
 install_pkgs_pacman(){
-    pacman -S --needed --noconfirm alacritty alsa-utils arandr bspwm brightnessctl calcurse dunst feh firefox git gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb htop i3lock imagemagick libnotify lxappearance-gtk3 maim mpc mpd mpv ncmpcpp neofetch neovim networkmanager pcmanfm-gtk3 picom polybar ranger rofi sed sxhkd sudo udisks2 ueberzug unzip xclip xdg-user-dirs-gtk xorg-xinit xss-lock zathura zathura-pdf-mupdf zip zsh
+    pacman -S --needed --noconfirm alacritty alsa-utils arandr bspwm brightnessctl calcurse dunst feh firefox git gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb htop i3lock imagemagick libnotify lxappearance-gtk3 maim mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat pcmanfm-gtk3 picom polybar ranger rofi sed sxhkd sudo udisks2 ueberzug unzip xclip xdg-user-dirs-gtk xorg-xinit xss-lock zathura zathura-pdf-mupdf zip zsh
 }
 
 install_pkgs_apt(){
-    apt install -y alacritty alsa-utils arandr bspwm brightnessctl calcurse dunst feh git gtk2-engines-murrine gvfs gvfs-common gvfs-daemons htop i3lock imagemagick lxappearance libnotify-bin maim mpc mpd mpv ncmpcpp neovim neofetch network-manager pcmanfm picom polybar ranger rofi sed sxhkd sudo udisks2 ueberzug unzip xclip xdg-user-dirs-gtk xinit xss-lock zathura zathura-pdf-poppler zip zsh
+    apt install -y alacritty alsa-utils arandr bspwm brightnessctl calcurse dunst feh git gtk2-engines-murrine gvfs gvfs-common gvfs-daemons htop i3lock imagemagick lxappearance libnotify-bin maim mpc mpd mpv ncmpcpp neovim neofetch network-manager newsboat pcmanfm picom polybar ranger rofi sed sxhkd sudo udisks2 ueberzug unzip xclip xdg-user-dirs-gtk xinit xss-lock zathura zathura-pdf-poppler zip zsh
 }
 
 install_pkgs_dnf(){
-    dnf install -y --allowerasing alacritty alsa-utils arandr bspwm brightnessctl calcurse dunst feh firefox git gtk-murrine-engine gvfs gvfs-afc gvfs-mtp gvfs-smb htop i3lock ImageMagick lxappearance libnotify maim mpc mpd mpv ncmpcpp neovim neofetch NetworkManager pcmanfm picom polybar ranger rofi sed sxhkd sudo udisks2 unzip xclip xdg-user-dirs-gtk xorg-x11-xinit xss-lock zathura zathura-pdf-mupdf zip zsh
+    dnf install -y --allowerasing alacritty alsa-utils arandr bspwm brightnessctl calcurse dunst feh firefox git gtk-murrine-engine gvfs gvfs-afc gvfs-mtp gvfs-smb htop i3lock ImageMagick lxappearance libnotify maim mpc mpd mpv ncmpcpp neovim neofetch NetworkManager newsboat pcmanfm picom polybar ranger rofi sed sxhkd sudo udisks2 unzip xclip xdg-user-dirs-gtk xorg-x11-xinit xss-lock zathura zathura-pdf-mupdf zip zsh
 }
 
 install_pkgs_zypper(){
-    zypper in -y alacritty arandr bspwm brightnessctl calcurse dunst feh firefox git gtk2-engine-murrine gvfs htop i3lock ImageMagick lxappearance libnotify maim mpd mpv ncmpcpp neofetch neovim NetworkManager pcmanfm picom polybar ranger rofi sed sxhkd sudo udisks2 ueberzug unzip xclip xdg-user-dirs-gtk xinit xss-lock yad zathura zathura-pdf-mupdf zip zsh
+    zypper in -y alacritty arandr bspwm brightnessctl calcurse dunst feh firefox git gtk2-engine-murrine gvfs htop i3lock ImageMagick lxappearance libnotify maim mpd mpv ncmpcpp neofetch neovim NetworkManager newsboat pcmanfm picom polybar ranger rofi sed sxhkd sudo udisks2 ueberzug unzip xclip xdg-user-dirs-gtk xinit xss-lock yad zathura zathura-pdf-mupdf zip zsh
 }
 
 install_pkgs_xbps(){
-    xbps-install -Sy alacritty alsa-utils arandr bspwm brightnessctl btop calcurse dunst feh firefox git gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb i3lock ImageMagick libnotify lxappearance maim mpc mpd mpv ncmpcpp neofetch neovim NetworkManager pcmanfm picom polybar psmisc ranger rofi sed sxhkd sudo udisks2 unzip xclip xdg-user-dirs-gtk xinit xss-lock zathura zathura-pdf-mupdf zip zsh
+    xbps-install -Sy alacritty alsa-utils arandr bspwm brightnessctl btop calcurse dunst feh firefox git gtk-engine-murrine gvfs gvfs-afc gvfs-mtp gvfs-smb i3lock ImageMagick libnotify lxappearance maim mpc mpd mpv ncmpcpp neofetch neovim NetworkManager newsboat pcmanfm picom polybar psmisc ranger rofi sed sxhkd sudo udisks2 unzip xclip xdg-user-dirs-gtk xinit xss-lock zathura zathura-pdf-mupdf zip zsh
 }
 
-prepare_folders(){
-    logo "Preparing Folders"
+prepare_user_folders(){
+    logo "Preparing user and folders"
     getent passwd $username > /dev/null
     if [ $? -eq 0 ]; then
         echo $username "exists"
@@ -343,12 +343,12 @@ reboot_msg(){
 root_checking
 intro
 read_username
+prepare_user_folders
 update
 setup_before_install
 install_xorg
 install_pipewire
 install_pkgs
-prepare_folders
 clone_dotfiles
 backup_dotfiles
 install_dotfiles
