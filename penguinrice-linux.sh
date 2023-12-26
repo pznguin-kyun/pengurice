@@ -214,7 +214,7 @@ if [ ! -d "$backup_folder" ]; then
 	mkdir -p "$backup_folder"
 fi
 
-for folder in alacritty bspwm gtk-3.0 htop mpd ncmpcpp neofetch nvim ranger; do
+for folder in alacritty bspwm gtk-3.0 htop mpd ncmpcpp neofetch newsboat nvim pipewire ranger; do
 	if [ -d "/home/$username/.config/$folder" ]; then
 		mv "/home/$username/.config/$folder" "$backup_folder/${folder}_$date"
 		echo "$folder folder backed up successfully at $backup_folder/${folder}_$date"
@@ -247,12 +247,7 @@ done_msg
 install_dotfiles(){
 logo "Installing dotfiles.."
 printf "Copying files to respective directories..\n"
-cp -R /tmp/penguinDotfiles/config/* /home/$username/.config
-cp -R /tmp/penguinDotfiles/themes/* /home/$username/.themes
-cp -R /tmp/penguinDotfiles/icons/* /home/$username/.icons
-cp -R /tmp/penguinDotfiles/fonts/* /home/$username/.fonts
-cp -RT /tmp/penguinDotfiles/fonts/local/ /home/$username/.local/
-cp -RT /tmp/penguinDotfiles/home/ /home/$username
+cp -rfT /tmp/penguinDotfiles/main/ /home/$username/
 chown -R $username:$username /home/$username
 done_msg
 }
