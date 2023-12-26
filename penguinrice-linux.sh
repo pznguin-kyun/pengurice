@@ -278,6 +278,7 @@ config_firefox(){
   sudo -u "$username" firefox --headless >/dev/null &
   sleep 2
   cp -R /tmp/penguinDotfiles/misc/firefox/* /home/$username/.mozilla/firefox/*.default-*/
+  chown -R $username:$username /home/$username/.mozilla/firefox/
   pkill -u "$username" firefox
   sleep 1
   done_msg
