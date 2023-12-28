@@ -60,9 +60,9 @@ user: sudo ./penguinrice-linux.sh or su -c 'penguinrice-linux.sh'
 
 ## Install with curl
 ```
-curl -sSL https://raw.githubusercontent.com/p3nguin-kun/penguinRice/main/penguinrice-linux.sh
-root: ./penguinrice-linux.sh
-user: sudo ./penguinrice-linux.sh or su -c './penguinrice-linux.sh'
+curl -LO https://raw.githubusercontent.com/p3nguin-kun/penguinRice/main/penguinrice-linux.sh
+root: bash penguinrice-linux.sh
+user: sudo bash penguinrice-linux.sh or su -c 'bash penguinrice-linux.sh'
 ```
 
 ## Some notes
