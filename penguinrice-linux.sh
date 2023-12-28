@@ -18,7 +18,7 @@ branch="bspwm"
 
 logo() {
 	local text="${1:?}"
-	echo -e '[%s%s %s%s %s]\n\n' "${CRE}" "${CNC}" "${CYE}" "${text}"
+	printf '[%s %s %s %s %s]\n\n' "${CRE}" "${CNC}" "${CYE}" "${text}"
 }
 
 root_checking(){
