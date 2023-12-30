@@ -54,20 +54,18 @@ penguinRice is for people who want to use a simple but fully functional Linux se
 ```
 git clone --depth 1 https://github.com/p3nguin-kun/penguinRice
 cd penguinRice
-root: ./penguinrice-linux.sh
-user: sudo ./penguinrice-linux.sh or su -c 'penguinrice-linux.sh'
+./penguinrice-linux.sh
 ```
 
 ## Install with curl
 ```
 curl -LO https://raw.githubusercontent.com/p3nguin-kun/penguinRice/main/penguinrice-linux.sh
-root: bash penguinrice-linux.sh
-user: sudo bash penguinrice-linux.sh or su -c 'bash penguinrice-linux.sh'
+bash penguinrice-linux.sh
 ```
 
 ## Some notes
 - If your system doesn't have `bash`, install it
-- Tested on archlinux latest, fedora 38, debian 12, ubuntu 23.04, opensuse tumbleweed, voidlinux latest.
+- Tested on latest Arch Linux, Fedora 38, Debian 12, Ubuntu 23.04, OpenSUSE Tumbleweed, latest Void Linux.
 - This script MUST BE run as root
 - If you dont have display manager (or login manager), you can login with xinit.
 ```
@@ -81,7 +79,6 @@ startx
 - [Contributors](https://github.com/p3nguin-kun/penguinRice/graphs/contributors)
 - Some people on Discord
 - [penguinFox](https://github.com/p3nguin-kun/penguinFox): Firefox config
-- [mvim](https://github.com/p3nguin-kun/mvim): NeoVim config
 
 # Contributions
 1. Fork this project.
