@@ -18,6 +18,7 @@ branch="bspwm"
 
 logo() {
 	local text="${1:?}"
+	# shellcheck disable=SC2183
 	printf '[%s %s %s %s %s]\n\n' "${CRE}" "${CNC}" "${CYE}" "${text}"
 }
 
@@ -110,6 +111,7 @@ setup_before_install(){
 			    zypper ar -cfp 90 "https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/" packman
 			    zypper dup --from packman --allow-vendor-change -y ;;
 		    opensuse-leap)
+			    # shellcheck disable=SC2154
 			    zypper ar -cfp 90 "https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/" packman
 			    zypper dup --from packman --allow-vendor-change -y ;;
 		    suse)
