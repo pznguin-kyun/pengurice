@@ -19,7 +19,7 @@ branch="bspwm"
 logo() {
 	local text="${1:?}"
 	# shellcheck disable=SC2183
-	printf '[%s %s %s %s %s]\n\n' "${CRE}" "${CNC}" "${CYE}" "${text}"
+	printf '%s [%s%s %s%s %s]%s\n\n' "${CRE}" "${CNC}" "${CYE}" "${text}"
 }
 
 root_checking(){
@@ -140,7 +140,7 @@ install_pkgs(){
 
 prepare_user_folders(){
     logo "Preparing user and folders"
-    if [ "$(id -u "$username" > /dev/null)" -eq 0 ]; then
+    if [ ! "$(id -u "$username" > /dev/null)" ]; then
         echo "$username" "exists"
     else
         echo "$username" "does not exist"
