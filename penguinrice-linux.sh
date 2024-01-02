@@ -226,9 +226,9 @@ enable_services(){
         logo "Enabling services"
         systemctl enable NetworkManager
         systemctl disable NetworkManager-wait-online.service
-        sudo -u "$username" systemctl --user disable pipewire.service
-        sudo -u "$username" systemctl --user disable pipewire-pulse.service
-        sudo -u "$username" systemctl --user disable wireplumber.service
+        sudo -u "$username" systemctl --user enable pipewire.service
+        sudo -u "$username" systemctl --user enable pipewire-pulse.service
+        sudo -u "$username" systemctl --user enable wireplumber.service
     elif command -v loginctl &>/dev/null; then
         ln -s /etc/sv/NetworkManager /var/service/
     fi
