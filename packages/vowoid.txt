@@ -33,6 +33,7 @@ pipewire
 polybar
 psmisc
 ranger
+redshift
 rofi
 sed
 sxhkd

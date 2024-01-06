@@ -27,6 +27,7 @@ picom
 pipewire
 polybar
 ranger
+redshift
 rofi
 sed
 sxhkd

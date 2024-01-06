@@ -33,6 +33,7 @@ pipewire
 pipewire-pulse
 polybar
 ranger
+redshift
 rofi
 sed
 sxhkd
