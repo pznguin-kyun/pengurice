@@ -72,9 +72,6 @@ bash penguinrice-linux.sh
 startx
 ```
 
-#  References
-
-
 # Credits
 - [Contributors](https://github.com/p3nguin-kun/penguinRice/graphs/contributors)
 - Some people on Discord
