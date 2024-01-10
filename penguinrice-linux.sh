@@ -210,17 +210,6 @@ EndSection' >/etc/X11/xorg.conf.d/40-libinput.conf
     fi
 }
 
-config_firefox(){
-  logo "Config Firefox"
-  sudo -u "$username" firefox --headless >/dev/null &
-  sleep 2
-  cp -R /tmp/dotfiles/misc/firefox/* /home/"$username"/.mozilla/firefox/*.default-*/
-  chown -R "$username":"$username" /home/"$username"/.mozilla/firefox/
-  pkill -u "$username" firefox
-  sleep 1
-  done_msg
-}
-
 enable_services(){
     if command -v systemctl &>/dev/null; then
         logo "Enabling services"
@@ -287,7 +276,6 @@ clone_dotfiles
 backup_dotfiles
 install_dotfiles
 config_smth
-config_firefox
 enable_services
 change_shell
 complete_msg
