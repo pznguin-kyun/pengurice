@@ -8,6 +8,7 @@ calcurse
 chromium
 dunst
 feh
+firefox
 git
 gtk-engine-murrine
 gvfs

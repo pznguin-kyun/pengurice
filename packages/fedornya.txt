@@ -4,9 +4,9 @@ arandr
 bspwm
 brightnessctl
 calcurse
-chromium
 dunst
 feh
+firefox
 git
 gtk-murrine-engine
 gvfs
