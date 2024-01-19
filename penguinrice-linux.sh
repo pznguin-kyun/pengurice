@@ -76,7 +76,7 @@ update(){
         *)
           pacman --noconfirm --needed -Sy artix-keyring artix-archlinux-support ;;
         esac
-        pacman -Syyuu ;;
+        pacman -Syyuu --noconfirm ;;
       debnyan) apt update -y && apt upgrade -y ;;
       fedornya) dnf update -y ;;
       sus) zypper dup -y ;;
@@ -86,9 +86,11 @@ update(){
 }
 
 setup_before_install(){
-  case $distro in
+    logo "Setup before install"
+    case "$distro" in
     nyarch)
-      case "$(readlink -f /sbin/init)" in
+        pacman -Sy --noconfirm curl
+        case "$(readlink -f /sbin/init)" in
 	      *systemd*) return ;;
 	      *)
 		    logo "Enabling Arch Repositories"
@@ -98,12 +100,15 @@ setup_before_install(){
 		    pacman-key --populate archlinux >/dev/null ;;
       esac
     ;;
+    debnyan)
+        apt install -y curl ;;
+    vowoid)
+        xbps-install -Sy curl ;;
     fedornya)
-      logo "Adding repos"
+      dnf install curl
       dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm -y
       dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm -y ;;
     sus) 
-      logo "Adding repos"
       eval "$(cat /etc/os-release)"
       if [ -f /etc/os-release ]; then
       case $ID in
@@ -128,12 +133,12 @@ install_pkgs(){
     logo "Installing packages"
     [ -f /tmp/"$distro".txt ] && rm -rf /tmp/"$distro".txt
     curl -o /tmp/"$distro".txt https://raw.githubusercontent.com/p3nguin-kun/penguinRice/main/packages/"$distro".txt
-    case $distro in
-      nyarch) pacman -S --needed --noconfirm - < /tmp/"$distro".txt ;;
-      debnyan) apt install -y - < /tmp/"$distro".txt ;;
-      fedornya) dnf install -y --allowerasing - < /tmp/"$distro".txt ;;
-      sus) zypper in -y - < /tmp/"$distro".txt ;;
-      vowoid) xbps-install -Sy - < /tmp/"$distro".txt ;;
+    case "$distro" in
+        debnyan) apt install -y < /tmp/"$distro".txt ;;
+        fedornya) dnf install -y --allowerasing < /tmp/"$distro".txt ;;
+        nyarch) pacman -Sy --noconfirm < /tmp/"$distro".txt ;;
+        sus) zypper in -y < /tmp/"$distro".txt ;;
+        vowoid) xbps-install -Sy < /tmp/"$distro".txt ;;
     esac
     done_msg
 }
