@@ -134,11 +134,11 @@ install_pkgs(){
     [ -f /tmp/"$distro".txt ] && rm -rf /tmp/"$distro".txt
     curl -o /tmp/"$distro".txt https://raw.githubusercontent.com/p3nguin-kun/penguinRice/main/packages/"$distro".txt
     case "$distro" in
-        debnyan) apt install -y < /tmp/"$distro".txt ;;
-        fedornya) dnf install -y --allowerasing < /tmp/"$distro".txt ;;
-        nyarch) pacman -Sy --noconfirm < /tmp/"$distro".txt ;;
-        sus) zypper in -y < /tmp/"$distro".txt ;;
-        vowoid) xbps-install -Sy < /tmp/"$distro".txt ;;
+        debnyan) xargs -a /tmp/"$distro".txt apt install -y ;;
+        fedornya) xargs -a /tmp/"$distro".txt dnf install -y --allowerasing ;;
+        nyarch) xargs -a /tmp/"$distro".txt pacman -Sy --noconfirm ;;
+        sus) xargs -a /tmp/"$distro".txt zypper in -y ;;
+        vowoid) xargs -a /tmp/"$distro".txt xbps-install -Sy ;;
     esac
     done_msg
 }
