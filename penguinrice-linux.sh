@@ -29,11 +29,6 @@ if [ ! "$(id -u)" = 0 ]; then
 fi
 }
 
-done_msg(){
-    printf "%s%sDone!!%s\n\n" "${BLD}" "${CGR}" "${CNC}"
-    sleep 1
-}
-
 intro(){
     logo "Welcome!"
 printf '%s%sWelcome to penguinRice!\nThis script will automatically install fully-featured tiling window manager-based system on any Linux system.\nMy dotfiles DO NOT modify any of your system configuration.\nYou will be prompted for your root password to install missing dependencies.\nThis script doesnt have potential power to break your system, it only copies files from my repo to your HOME directory. %s\n\n' "${BLD}" "${CRE}" "${CNC}"
@@ -82,7 +77,6 @@ update(){
       sus) zypper dup -y ;;
       vowoid) xbps-install -Syu ;;
     esac
-    done_msg
 }
 
 setup_before_install(){
@@ -126,7 +120,6 @@ setup_before_install(){
       fi
     ;;
   esac
-  done_msg
 }
 
 install_pkgs(){
@@ -140,7 +133,6 @@ install_pkgs(){
         sus) xargs -a /tmp/"$distro".txt zypper in -y ;;
         vowoid) xargs -a /tmp/"$distro".txt xbps-install -Sy ;;
     esac
-    done_msg
 }
 
 prepare_user_folders(){
@@ -154,7 +146,6 @@ prepare_user_folders(){
         passwd "$username"
     fi
     mkdir -p /home/"$username"/
-    done_msg
 }
 
 clone_dotfiles(){
@@ -162,7 +153,6 @@ clone_dotfiles(){
     logo "Downloading dotfiles"
     [ -d $dotfiles_dir ] && rm -rf $dotfiles_dir
     git clone --depth=1 "$git_repo" -b "$branch" "$dotfiles_dir"
-    done_msg
 }
 
 backup_dotfiles(){
@@ -183,7 +173,6 @@ done
 for file in .xinitrc .fehbg .zshrc .Xresources; do
   [ -f /home/"$username"/$file ] && mv /home/"$username"/"$file" /home/"$username"/.RiceBackup/"$file"-backup-"$date"
 done
-done_msg
 }
 
 install_dotfiles(){
@@ -191,7 +180,6 @@ logo "Installing dotfiles.."
 printf "Copying files to respective directories..\n"
 cp -rfT /tmp/dotfiles/main/ /home/"$username"/
 chown -R "$username":"$username" /home/"$username"
-done_msg
 }
 
 config_smth(){
@@ -204,14 +192,12 @@ config_smth(){
 	# Enable left mouse button by tapping
 	Option "Tapping" "on"
 EndSection' >/etc/X11/xorg.conf.d/40-libinput.conf
-    done_msg
     if command -v pacman &>/dev/null; then
         logo "Configuring pacman (for what???)"
         sed -i "s/^#Color$/Color/" /etc/pacman.conf
         sed -i "s/#NoProgressBar/ILoveCandy/" /etc/pacman.conf
         sed -i "s/#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf
         sed -i "s/#ParallelDownloads\ =\ 5/ParallelDownloads\ =\ 5/" /etc/pacman.conf
-        done_msg
     fi
 }
 
@@ -226,7 +212,6 @@ enable_services(){
     elif command -v loginctl &>/dev/null; then
         ln -s /etc/sv/NetworkManager /var/service/
     fi
-    done_msg
 }
 
 check_shell(){
@@ -241,7 +226,6 @@ change_shell(){
     else
 	    echo -e "Your shell is already zsh\n" "${BLD}" "${CGR}" "${CNC}"
     fi
-    done_msg
 }
 
 complete_msg(){
