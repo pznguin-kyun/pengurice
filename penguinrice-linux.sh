@@ -156,7 +156,7 @@ clone_dotfiles(){
 }
 
 backup_dotfiles(){
-  backup_folder=/home/$username/.RiceBackup
+  backup_folder=/home/"$username"/.RiceBackup
   logo "Backing-up dotfiles"
   echo "Backup files will be stored in /home/$username/.RiceBackup" "${BLD}" "${CRE}" "$HOME" "${CNC}"
   sleep 1
