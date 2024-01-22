@@ -23,11 +23,11 @@ mpc
 mpd
 mpv
 ncmpcpp
+nemo
 neovim
 neofetch
 NetworkManager
 newsboat
-pcmanfm
 picom
 pipewire
 polybar

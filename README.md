@@ -15,7 +15,7 @@ penguinRice is for people who want to use a simple but fully functional Linux se
 - Window Manager: [bspwm](https://github.com/baskerville/bspwm)
 - Terminal: [Alacritty](https://alacritty.org/)
 - Browser: [Firefox](https://www.mozilla.org/en/firefox/new/)
-- File Manager: [Ranger](https://ranger.github.io/)/[pcmanfm](https://github.com/lxde/pcmanfm)
+- File Manager: [Ranger](https://ranger.github.io/)/[Nemo](https://github.com/linuxmint/nemo)
 - Text Editor: [NeoVim](https://neovim.io)
 - PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
 - RSS Reader: [Newsboat](https://newsboat.org/)

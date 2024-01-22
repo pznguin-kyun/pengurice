@@ -19,11 +19,11 @@ maim
 mpd
 mpv
 ncmpcpp
+nemo
 neofetch
 neovim
 NetworkManager
 newsboat
-pcmanfm
 picom
 pipewire
 polybar
