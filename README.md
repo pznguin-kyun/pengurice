@@ -11,7 +11,7 @@ penguinRice is for people who want to use a simple but fully functional Linux se
 # Details
 <img src="https://i.imgur.com/6ReXidY.png" alt="penguinrice" align="right" height="240px">
 
-- Dotfiles: [penguinDotfiles](https://github.com/p3nguin-kun/penguinDotfiles)
+- Dotfiles: [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles)
 - Window Manager: [bspwm](https://github.com/baskerville/bspwm)
 - Terminal: [Alacritty](https://alacritty.org/)
 - Browser: [Firefox](https://www.mozilla.org/en/firefox/new/)
@@ -52,14 +52,14 @@ penguinRice is for people who want to use a simple but fully functional Linux se
 
 ## Install with git
 ```
-git clone --depth 1 https://github.com/p3nguin-kun/penguinRice
+git clone --depth 1 https://github.com/Haruzona/penguinRice
 cd penguinRice
 ./penguinrice-linux.sh
 ```
 
 ## Install with curl
 ```
-curl -LO https://raw.githubusercontent.com/p3nguin-kun/penguinRice/main/penguinrice-linux.sh
+curl -LO https://raw.githubusercontent.com/Haruzona/penguinRice/main/penguinrice-linux.sh
 bash penguinrice-linux.sh
 ```
 
@@ -73,9 +73,8 @@ startx
 ```
 
 # Credits
-- [Contributors](https://github.com/p3nguin-kun/penguinRice/graphs/contributors)
+- [Contributors](https://github.com/Haruzona/penguinRice/graphs/contributors)
 - Some people on Discord
-- [penguinFox](https://github.com/p3nguin-kun/penguinFox): Firefox config
 
 # Contributions
 1. Fork this project.
