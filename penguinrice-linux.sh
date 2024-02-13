@@ -83,7 +83,7 @@ setup_before_install(){
     logo "Setup before install"
     case "$distro" in
     nyarch)
-        pacman -Sy --noconfirm curl
+        pacman -Sy --noconfirm --needed curl
         case "$(readlink -f /sbin/init)" in
 	      *systemd*) return ;;
 	      *)
@@ -129,7 +129,7 @@ install_pkgs(){
     case "$distro" in
         debnyan) xargs -a /tmp/"$distro".txt apt install -y ;;
         fedornya) xargs -a /tmp/"$distro".txt dnf install -y --allowerasing ;;
-        nyarch) xargs -a /tmp/"$distro".txt pacman -Sy --noconfirm ;;
+        nyarch) xargs -a /tmp/"$distro".txt pacman -Sy --noconfirm --needed ;;
         sus) xargs -a /tmp/"$distro".txt zypper in -y ;;
         vowoid) xargs -a /tmp/"$distro".txt xbps-install -Sy ;;
     esac
@@ -160,26 +160,25 @@ backup_dotfiles(){
   logo "Backing-up dotfiles"
   echo "Backup files will be stored in /home/$username/.RiceBackup" "${BLD}" "${CRE}" "$HOME" "${CNC}"
   sleep 1
-if [ ! -d "$backup_folder" ]; then
-	mkdir -p "$backup_folder"
-fi
+    if [ ! -d "$backup_folder" ]; then
+    	mkdir -p "$backup_folder"
+    fi
+    for folder in alacritty bspwm dunst gtk-3.0 htop i3lock mpd ncmpcpp neofetch newsboat nvim picom pipewire polybar ranger rofi; do
+    	if [ -d /home/"$username"/.config/$folder ]; then
+    		mv /home/"$username"/.config/$folder "$backup_folder/${folder}_$date"
+      fi
+    done
 
-for folder in alacritty bspwm dunst gtk-3.0 htop i3lock mpd ncmpcpp neofetch newsboat nvim picom pipewire polybar ranger rofi; do
-	if [ -d /home/"$username"/.config/$folder ]; then
-		mv /home/"$username"/.config/$folder "$backup_folder/${folder}_$date"
-  fi
-done
-
-for file in .xinitrc .fehbg .zshrc .Xresources; do
-  [ -f /home/"$username"/$file ] && mv /home/"$username"/"$file" /home/"$username"/.RiceBackup/"$file"-backup-"$date"
-done
+    for file in .xinitrc .fehbg .zshrc .Xresources; do
+      [ -f /home/"$username"/$file ] && mv /home/"$username"/"$file" /home/"$username"/.RiceBackup/"$file"-backup-"$date"
+    done
 }
 
 install_dotfiles(){
-logo "Installing dotfiles.."
-printf "Copying files to respective directories..\n"
-cp -rfT /tmp/dotfiles/main/ /home/"$username"/
-chown -R "$username":"$username" /home/"$username"
+    logo "Installing dotfiles.."
+    printf "Copying files to respective directories..\n"
+    cp -rfT /tmp/dotfiles/main/ /home/"$username"/
+    chown -R "$username":"$username" /home/"$username"
 }
 
 config_smth(){
@@ -231,6 +230,7 @@ change_shell(){
 complete_msg(){
     logo "Done!"
     echo -e "Thanks for using penguinRice!\n" "${BLD}" "${CYE}" "${CNC}"
+    echo -e "Before restart:\n\n1. If you use Display Manager, choose 'bspwm' as session/desktop environment and log in.\n2. If you use tty, you just need to log in to your account.\n"
     while true; do
 	    read -rp "Do you want to restart now? [Y/n]: " yn2
 	    case $yn2 in
