@@ -230,7 +230,7 @@ change_shell(){
 complete_msg(){
     logo "Done!"
     echo -e "Thanks for using penguinRice!\n" "${BLD}" "${CYE}" "${CNC}"
-    echo -e "Before restart:\n\n1. If you use Display Manager, choose 'bspwm' as session/desktop environment and log in.\n2. If you use tty, you just need to log in to your account.\n"
+    echo -e "Before restart, you need to remember the following things:\n\n1. If you use Display Manager, choose 'bspwm' as session/desktop environment and log in.\n2. If you use tty, you just need to log in to your account.\n"
     while true; do
 	    read -rp "Do you want to restart now? [Y/n]: " yn2
 	    case $yn2 in
