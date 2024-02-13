@@ -28,6 +28,7 @@ neofetch
 neovim
 networkmanager
 newsboat
+pavucontrol
 picom
 pipewire
 pipewire-pulse

@@ -28,6 +28,7 @@ neovim
 neofetch
 NetworkManager
 newsboat
+pavucontrol
 picom
 pipewire
 polybar
