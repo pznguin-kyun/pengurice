@@ -163,7 +163,7 @@ backup_dotfiles(){
     if [ ! -d "$backup_folder" ]; then
     	mkdir -p "$backup_folder"
     fi
-    for folder in alacritty bspwm dunst gtk-3.0 htop i3lock mpd ncmpcpp neofetch newsboat nvim picom pipewire polybar ranger rofi; do
+    for folder in alacritty bspwm dunst gtk-3.0 htop i3lock mpd ncmpcpp neofetch newsboat nvim picom pipewire polybar ranger rofi zsh; do
     	if [ -d /home/"$username"/.config/$folder ]; then
     		mv /home/"$username"/.config/$folder "$backup_folder/${folder}_$date"
       fi
