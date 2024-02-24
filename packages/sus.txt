@@ -3,7 +3,6 @@ arandr
 bspwm
 brightnessctl
 calcurse
-chromium
 dunst
 feh
 firefox
