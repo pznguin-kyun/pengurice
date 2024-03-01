@@ -6,6 +6,7 @@ brightnessctl
 calcurse
 dunst
 feh
+galculator
 git
 gtk2-engines-murrine
 gvfs

@@ -6,6 +6,7 @@ calcurse
 dunst
 feh
 firefox
+galculator
 git
 gtk2-engine-murrine
 gvfs
