@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-# --- penguinRice ---
+# ################### #
+# -=- penguinRice -=-
+# ################### #
+
 # GitHub: p3nguin-kun
 
 CRE=$(tput setaf 1)
@@ -9,12 +12,12 @@ CGR=$(tput setaf 2)
 BLD=$(tput bold)
 CNC=$(tput sgr0)
 
-# --- Vars ---
+# // Vars //
 date=$(date +%Y%m%d-%H%M%S)
 git_repo="https://github.com/p3nguin-kun/penguinDotfiles"
 branch="bspwm"
 
-# --- Functions ---
+# // Functions //
 
 logo() {
 	local text="${1:?}"
@@ -179,6 +182,7 @@ install_dotfiles(){
     printf "Copying files to respective directories..\n"
     cp -rfT /tmp/dotfiles/main/ /home/"$username"/
     chown -R "$username":"$username" /home/"$username"
+    fc-cache -fv
 }
 
 config_smth(){
@@ -251,7 +255,7 @@ reboot_msg(){
     fi
 }
 
-# --- Main ---
+# // Main //
 
 root_checking
 intro
