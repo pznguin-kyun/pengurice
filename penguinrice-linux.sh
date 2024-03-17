@@ -166,6 +166,7 @@ backup_dotfiles(){
     if [ ! -d "$backup_folder" ]; then
     	mkdir -p "$backup_folder"
     fi
+    [ -d /home/"$username"/.config/bspwm/user ] && mv /home/"$username"/.config/bspwm/user /tmp/bsp_backup
     for folder in alacritty bspwm dunst gtk-3.0 htop i3lock mpd ncmpcpp neofetch newsboat nvim picom pipewire polybar ranger rofi zsh; do
     	if [ -d /home/"$username"/.config/$folder ]; then
     		mv /home/"$username"/.config/$folder "$backup_folder/${folder}_$date"
@@ -181,6 +182,7 @@ install_dotfiles(){
     logo "Installing dotfiles.."
     printf "Copying files to respective directories..\n"
     cp -rfT /tmp/dotfiles/main/ /home/"$username"/
+    [ -d /tmp/bsp_backup ] && mv /tmp/bsp_backup /home/"$username"/.config/bspwm/user
     chown -R "$username":"$username" /home/"$username"
     fc-cache -fv
 }
