@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-# ################### #
-# -=- penguinRice -=-
-# ################### #
-
-# GitHub: p3nguin-kun
+# penguinRice: p3nguin-kun's auto rice script
+# by p3nguin-kun <p3nguinkun@proton.me>
+# See LICENSE file for copyright and license details.
+# To understand everything else, start reading main().
 
 CRE=$(tput setaf 1)
 CYE=$(tput setaf 3)
@@ -12,12 +11,12 @@ CGR=$(tput setaf 2)
 BLD=$(tput bold)
 CNC=$(tput sgr0)
 
-# // Vars //
+# vars
 date=$(date +%Y%m%d-%H%M%S)
 git_repo="https://github.com/p3nguin-kun/penguinDotfiles"
 branch="bspwm"
 
-# // Functions //
+# functions
 
 logo() {
 	local text="${1:?}"
@@ -257,20 +256,23 @@ reboot_msg(){
     fi
 }
 
-# // Main //
+# main
+main(){
+    root_checking
+    intro
+    read_username
+    prepare_user_folders
+    check_distro
+    update
+    setup_before_install
+    install_pkgs
+    clone_dotfiles
+    backup_dotfiles
+    install_dotfiles
+    config_smth
+    enable_services
+    change_shell
+    complete_msg
+}
 
-root_checking
-intro
-read_username
-prepare_user_folders
-check_distro
-update
-setup_before_install
-install_pkgs
-clone_dotfiles
-backup_dotfiles
-install_dotfiles
-config_smth
-enable_services
-change_shell
-complete_msg
+main
