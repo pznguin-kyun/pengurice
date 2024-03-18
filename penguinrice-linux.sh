@@ -5,6 +5,7 @@
 # See LICENSE file for copyright and license details.
 # To understand everything else, start reading main().
 
+# consts
 CRE=$(tput setaf 1)
 CYE=$(tput setaf 3)
 CGR=$(tput setaf 2)
