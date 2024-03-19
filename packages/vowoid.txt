@@ -1,9 +1,7 @@
 alacritty
-alsa-utils
 arandr
 bspwm
 brightnessctl
-btop
 calcurse
 dunst
 elogind
@@ -30,10 +28,12 @@ neofetch
 neovim
 NetworkManager
 newsboat
+pamixer
 pavucontrol
 picom
 pipewire
 polybar
+pulseaudio
 psmisc
 ranger
 redshift

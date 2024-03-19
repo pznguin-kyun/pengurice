@@ -24,10 +24,12 @@ neofetch
 neovim
 NetworkManager
 newsboat
+pamixer
 pavucontrol
 picom
 pipewire
 polybar
+pulseaudio
 ranger
 redshift
 rofi
