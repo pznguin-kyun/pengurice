@@ -86,7 +86,7 @@ setup_before_install(){
     logo "Setup before install"
     case "$distro" in
     nyarch)
-        pacman -Sy --noconfirm --needed curl
+        pacman -Sy --noconfirm --needed curl git base-devel
         case "$(readlink -f /sbin/init)" in
 	      *systemd*) return ;;
 	      *)
@@ -95,32 +95,51 @@ setup_before_install(){
 			  echo -e "[extra]\nInclude = /etc/pacman.d/mirrorlist-arch" >> /etc/pacman.conf
 		    pacman -Sy --noconfirm >/dev/null
 		    pacman-key --populate archlinux >/dev/null ;;
-      esac
+        esac
+        git clone https://aur.archlinux.org/yay-bin.git /tmp/yay && cd /tmp/yay && sudo -u "$username" makepkg -si --noconfirm && cd
     ;;
     debnyan)
-        apt install -y curl ;;
+        apt install -y curl git wget gnupg lsb-release apt-transport-https ca-certificates
+        distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then lsb_release -sc; else echo focal; fi)
+        wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
+        sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
+Types: deb
+URIs: https://deb.librewolf.net
+Suites: $distro
+Components: main
+Architectures: amd64
+Signed-By: /usr/share/keyrings/librewolf.gpg
+EOF
+        apt update
+        ;;
     vowoid)
-        xbps-install -Sy curl ;;
+        xbps-install -Sy curl git ;;
     fedornya)
-      dnf install curl
-      dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm -y
-      dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm -y ;;
+        dnf install curl git
+        dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm -y
+        dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm -y 
+        dnf config-manager --add-repo https://rpm.librewolf.net/librewolf-repo.repo
+        ;;
     sus) 
-      eval "$(cat /etc/os-release)"
-      if [ -f /etc/os-release ]; then
-      case $ID in
-		    opensuse-tumbleweed)
-			    zypper ar -cfp 90 "https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/" packman
-			    zypper dup --from packman --allow-vendor-change -y ;;
-		    opensuse-leap)
-			    # shellcheck disable=SC2154
-			    zypper ar -cfp 90 "https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/" packman
-			    zypper dup --from packman --allow-vendor-change -y ;;
-		    suse)
-			    zypper ar -cfp 90 "https://ftp.gwdg.de/pub/linux/misc/packman/suse/SLE_$releasever/" packman
-			    zypper dup --from packman --allow-vendor-change -y ;;
-		  esac
-      fi
+        zypper in -y curl git
+        eval "$(cat /etc/os-release)"
+        if [ -f /etc/os-release ]; then
+            case $ID in
+		        opensuse-tumbleweed)
+			        zypper ar -cfp 90 "https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/" packman
+    			    zypper dup --from packman --allow-vendor-change -y ;;
+    		    opensuse-leap)
+    			    # shellcheck disable=SC2154
+    			    zypper ar -cfp 90 "https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/" packman
+    			    zypper dup --from packman --allow-vendor-change -y ;;
+    		    suse)
+    			    zypper ar -cfp 90 "https://ftp.gwdg.de/pub/linux/misc/packman/suse/SLE_$releasever/" packman
+    			    zypper dup --from packman --allow-vendor-change -y ;;
+    		esac
+        fi
+        rpm --import https://rpm.librewolf.net/pubkey.gpg
+        zypper ar -ef https://rpm.librewolf.net librewolf
+        zypper ref
     ;;
   esac
 }
@@ -132,7 +151,10 @@ install_pkgs(){
     case "$distro" in
         debnyan) xargs -a /tmp/"$distro".txt apt install -y ;;
         fedornya) xargs -a /tmp/"$distro".txt dnf install -y --allowerasing ;;
-        nyarch) xargs -a /tmp/"$distro".txt pacman -Sy --noconfirm --needed ;;
+        nyarch) 
+            xargs -a /tmp/"$distro".txt pacman -Sy --noconfirm --needed
+            sudo -u "$username" yay -S --noconfirm librewolf-bin
+        ;;
         sus) xargs -a /tmp/"$distro".txt zypper in -y ;;
         vowoid) xargs -a /tmp/"$distro".txt xbps-install -Sy ;;
     esac
