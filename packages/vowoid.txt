@@ -6,6 +6,7 @@ brightnessctl
 btop
 calcurse
 dunst
+elogind
 feh
 firefox
 galculator

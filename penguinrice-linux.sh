@@ -216,6 +216,8 @@ enable_services(){
         sudo -u "$username" systemctl --user enable wireplumber.service
     elif command -v loginctl &>/dev/null; then
         ln -s /etc/sv/NetworkManager /var/service/
+        ln -s /etc/sv/elogind /var/service/
+        ln -s /etc/sv/dbus /var/service/
     fi
 }
 
