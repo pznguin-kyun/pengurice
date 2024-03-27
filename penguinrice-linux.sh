@@ -204,7 +204,7 @@ install_dotfiles(){
     logo "Installing dotfiles.."
     printf "Copying files to respective directories..\n"
     cp -rfT /tmp/dotfiles/main/ /home/"$username"/
-    [ -d /tmp/bsp_backup ] && mv /tmp/bsp_backup /home/"$username"/.config/bspwm/user
+    [ -d /tmp/bsp_backup ] && cp /tmp/bsp_backup /home/"$username"/.config/bspwm/user
     chown -R "$username":"$username" /home/"$username"
     fc-cache -fv
 }
