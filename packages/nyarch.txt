@@ -33,7 +33,6 @@ picom
 pipewire
 pipewire-pulse
 polybar
-pulseaudio
 ranger
 redshift
 rofi
