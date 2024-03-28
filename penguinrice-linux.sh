@@ -153,7 +153,7 @@ install_pkgs(){
         fedornya) xargs -a /tmp/"$distro".txt dnf install -y --allowerasing ;;
         nyarch) 
             xargs -a /tmp/"$distro".txt pacman -Sy --noconfirm --needed
-            sudo -u "$username" yay -S --noconfirm librewolf-bin
+            sudo -u "$username" yay -S --noconfirm --needed librewolf-bin
         ;;
         sus) xargs -a /tmp/"$distro".txt zypper in -y ;;
         vowoid) xargs -a /tmp/"$distro".txt xbps-install -Sy ;;
