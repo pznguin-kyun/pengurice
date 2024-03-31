@@ -8,6 +8,12 @@ feh
 galculator
 git
 gtk2-engine-murrine
+google-noto-coloremoji-fonts
+google-noto-fonts
+google-noto-sans-cjk-fonts
+google-noto-serif-cjk-fonts
+google-roboto-fonts
+google-roboto-mono-fonts
 gvfs
 htop
 i3lock

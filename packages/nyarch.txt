@@ -27,6 +27,10 @@ neofetch
 neovim
 networkmanager
 newsboat
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
 pamixer
 pavucontrol
 picom
@@ -39,6 +43,8 @@ rofi
 sed
 sxhkd
 sudo
+ttf-roboto
+ttf-roboto-mono
 udisks2
 ueberzug
 unzip

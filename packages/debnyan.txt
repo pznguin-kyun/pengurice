@@ -5,6 +5,11 @@ brightnessctl
 calcurse
 dunst
 feh
+fonts-noto
+fonts-noto-cjk
+fonts-noto-color-emoji
+fonts-noto-extra
+fonts-roboto
 galculator
 git
 gtk2-engines-murrine

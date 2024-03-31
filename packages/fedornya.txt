@@ -8,6 +8,11 @@ feh
 galculator
 git
 gtk-murrine-engine
+google-noto-cjk-fonts
+google-noto-emoji-fonts
+google-noto-fonts-common
+google-roboto-fonts
+google-roboto-mono-fonts
 gvfs
 gvfs-afc
 gvfs-mtp
