@@ -96,7 +96,7 @@ setup_before_install(){
 		    pacman -Sy --noconfirm >/dev/null
 		    pacman-key --populate archlinux >/dev/null ;;
         esac
-        git clone https://aur.archlinux.org/yay-bin.git /tmp/yay && cd /tmp/yay && sudo -u "$username" makepkg -si --noconfirm && cd
+        git clone https://aur.archlinux.org/yay-bin.git /tmp/aur && chmod 777 /tmp/aur && cd /tmp/aur && sudo -u "$username" makepkg -si --noconfirm && cd
     ;;
     debnyan)
         apt install -y curl git wget gnupg lsb-release apt-transport-https ca-certificates

@@ -33,6 +33,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-ttf
 pamixer
+papirus-icon-theme
 pavucontrol
 picom
 pipewire

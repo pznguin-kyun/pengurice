@@ -33,6 +33,7 @@ neofetch
 network-manager
 newsboat
 pamixer
+papirus-icon-theme
 pavucontrol
 picom
 pipewire
