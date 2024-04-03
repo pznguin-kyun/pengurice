@@ -13,11 +13,11 @@ google-noto-fonts
 google-noto-sans-cjk-fonts
 google-noto-serif-cjk-fonts
 google-roboto-fonts
-google-roboto-mono-fonts
 gvfs
 htop
 i3lock
 ImageMagick
+iosevka-fonts
 lxappearance
 libnotify
 librewolf

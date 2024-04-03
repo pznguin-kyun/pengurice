@@ -44,8 +44,8 @@ rofi
 sed
 sxhkd
 sudo
+ttc-iosevka
 ttf-roboto
-ttf-roboto-mono
 udisks2
 ueberzug
 unzip
