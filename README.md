@@ -22,9 +22,9 @@ This is penguinRice, a script that automatically rice your Linux system. I made 
 
 # Starring
 - [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles) as default dotfiles
-- [bspwm](https://github.com/baskerville/bspwm) as window manager
-- [alacritty](https://alacritty.org/) as default terminal
-- [librewolf](https://librewolf.net/) as browser
+- [bspwm ⚽](https://github.com/baskerville/bspwm) as window manager
+- [alacritty ❤️](https://alacritty.org/) as default terminal
+- [librewolf 🦊](https://librewolf.net/) as browser
 - [ranger](https://ranger.github.io/) and [nemo](https://github.com/linuxmint/nemo) as file manager
 - [neovim](https://neovim.io) as editor
 - [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) as music player
