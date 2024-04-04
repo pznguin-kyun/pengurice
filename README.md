@@ -9,17 +9,18 @@
 </p>
 
 # Table of Contents
-- [About ⁉️](#about)
-- [Gallery 📷](#gallery)
-- [Installation 🛠️](#installation)
-- [Keybindings ⌨️](#keybindings)
-- [Credits 👨‍🔧](#credits)
+- [About ⁉️](#about-)
+- [Starring 🌠](#starring-)
+- [Gallery 📷](#gallery-)
+- [Installation 🛠️](#installation-)
+- [Keybindings ⌨️](#keybindings-)
+- [Credits 👨‍🔧](#credits-)
 
 # About ⁉️
 ## Hello! Thanks for dropping by 👋
 This is penguinRice, a script that automatically rice your Linux system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
-# Starring
+# Starring 🌠
 - [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles) as default dotfiles
 - [bspwm ⚽](https://github.com/baskerville/bspwm) as window manager
 - [alacritty ❤️](https://alacritty.org/) as default terminal
