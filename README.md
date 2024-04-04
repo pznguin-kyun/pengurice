@@ -67,9 +67,9 @@ bash penguinrice-linux.sh
 Read [penguinDotfiles's README](https://github.com/Haruzona/penguinDotfiles) for more information
 
 ## Some notes
-- If your system doesn't have `bash`, install it
+- If your system doesn't have `bash`, install it.
 - Tested on latest Arch Linux, Fedora 38, Debian 12, Ubuntu 23.04, OpenSUSE Tumbleweed, latest Void Linux.
-- This script MUST BE run as root
+- This script MUST BE run as `root`.
 - If you dont have display manager (or login manager), you can login with xinit.
 ```
 startx
