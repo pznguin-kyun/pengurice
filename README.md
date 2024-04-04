@@ -54,12 +54,12 @@
 ```
 git clone --depth 1 https://github.com/Haruzona/penguinRice
 cd penguinRice
-./penguinrice-linux.sh
+./penguinrice.sh
 ```
 
 ## Install with curl
 ```
-curl -LO https://raw.githubusercontent.com/Haruzona/penguinRice/main/penguinrice-linux.sh
+curl -LO https://raw.githubusercontent.com/Haruzona/penguinRice/main/penguinrice.sh
 bash penguinrice-linux.sh
 ```
 
