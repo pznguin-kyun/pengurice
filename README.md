@@ -10,26 +10,30 @@
 
 # Table of Contents
 - [About ⁉️](#about)
+
 - [Gallery 📷](#gallery)
 - [Installation 🛠️](#installation)
 - [Keybindings ⌨️](#keybindings)
 - [Credits 👨‍🔧](#credits)
 
 # About
-- Dotfiles: [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles)
-- Window Manager: [bspwm](https://github.com/baskerville/bspwm)
-- Terminal: [Alacritty](https://alacritty.org/)
-- Browser: [Librewolf](https://librewolf.net/)
-- File Manager: [Ranger](https://ranger.github.io/)/[Nemo](https://github.com/linuxmint/nemo)
-- Text Editor: [NeoVim](https://neovim.io)
-- PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
-- RSS Reader: [Newsboat](https://newsboat.org/)
-- Calendar: [Calcurse](https://www.calcurse.org/)
-- Video player: [mpv](https://mpv.io)
-- Music player: [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
-- Fetch: [neofetch](https://github.com/dylanaraps/neofetch)
-- System monitor: [Htop](https://htop.dev)
-- Manage screens: [ARandR](https://christian.amsuess.com/tools/arandr/)
+## Hello! Thanks for dropping by
+This is penguinRice, a script that automatically rice your Linux system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
+
+# Starring
+- [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles) as default dotfiles
+- [bspwm](https://github.com/baskerville/bspwm) as window manager
+- [alacritty](https://alacritty.org/) as default terminal
+- [librewolf](https://librewolf.net/) as browser
+- [ranger](https://ranger.github.io/) and [nemo](https://github.com/linuxmint/nemo) as file manager
+- [neovim](https://neovim.io) as editor
+- [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) as music player
+- [calcurse](https://www.calcurse.org/) as calendar
+- [newsboat](https://newsboat.org/) as news reader
+- [htop](https://htop.dev) as system monitor
+
+and so on!
+
 
 # Gallery
 | bloom                                          | catppuccin                                     | dracula                                       |
