@@ -39,8 +39,8 @@
 | ![everforest](https://i.imgur.com/6SEhR5f.png) | ![gruvbox](https://i.imgur.com/K1GlJk8.png)    | ![macaroni](https://i.imgur.com/6ReXidY.png)  |
 | monochrome                                     | nord                                           | rosepine                                      |
 | ![monochrome](https://i.imgur.com/y3tnFkw.png) | ![nord](https://i.imgur.com/CmhW7Jb.png)       | ![rosepine](https://i.imgur.com/16Y0WZT.png)  |
-| snowy                                          | tokyonight                                     | vaporwave                                     |
-| ![snowy](https://i.imgur.com/YnxsCFS.png)      | ![tokyonight](https://i.imgur.com/DgYvmt4.png) | ![vaporwave](https://i.imgur.com/xyvSKMN.png) |
+| snowy                                          | tokyonight                                     |
+| ![snowy](https://i.imgur.com/YnxsCFS.png)      | ![tokyonight](https://i.imgur.com/DgYvmt4.png) |
 
 # Installation
 ## Distros
@@ -80,6 +80,7 @@ These are the basic keybinds. Read through the `bspwm/config/keys` file for more
 > Note: Super = Windows key
 
 | Keys                                              | Function                          |
+| :------------------------------------------------ | :-------------------------------- |
 | `Super + Enter`                                   | Launch terminal (alacritty)       |
 | `Super + Q`                                       | Close window                      |
 | `Super + Alt + R`                                 | Restart window manager (bspwm)    |
