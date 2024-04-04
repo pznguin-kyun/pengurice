@@ -1,16 +1,21 @@
-# penguinRice
-> 📜 A script that rice your Linux/*nix system.
-<p>
-    <a href="#details">Details</a> -  
-    <a href="#gallery">Gallery</a> - 
-    <a href="#installation">Install</a> - 
-    <a href="#credits">Credits</a>
+<h1 align="center>✨ penguinRice ✨ </h1>
+📜 A script that rice your Linux/*nix system.
+
+<p align="center">
+    <a href="https://github.com/Haruzona/penguinRice/stargazers"><img src="https://img.shields.io/github/stars/Haruzona/penguinRice?style=for-the-badge&color=%23ff8989"></a>
+    <a href="https://github.com/Haruzona/penguinRice/issues"><img src="https://img.shields.io/github/issues/Haruzona/penguinRice?style=for-the-badge&color=%23a978f6"></a>
+    <a href="https://github.com/Haruzona/penguinRice/pulls"><img src="https://img.shields.io/github/issues-pr/Haruzona/penguinRice?style=for-the-badge&color=%23a978f6"></a>
+    <a href="https://github.com/Haruzona/penguinRice/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Haruzona/penguinRice?style=for-the-badge&color=%23f2ff8a"></a>
 </p>
-penguinRice is for people who want to use a simple but fully functional Linux setup.
 
-# Details
-<img src="https://i.imgur.com/6ReXidY.png" alt="penguinrice" align="right" height="240px">
+# Table of Contents
+- [About ⁉️](#about)
+- [Gallery 📷](#gallery)
+- [Installation 🛠️](#installation)
+- [Keybindings ⌨️](#keybindings)
+- [Credits 👨‍🔧](#credits)
 
+# About
 - Dotfiles: [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles)
 - Window Manager: [bspwm](https://github.com/baskerville/bspwm)
 - Terminal: [Alacritty](https://alacritty.org/)
@@ -27,9 +32,6 @@ penguinRice is for people who want to use a simple but fully functional Linux se
 - Manage screens: [ARandR](https://christian.amsuess.com/tools/arandr/)
 
 # Gallery
-<details>
-<summary>Click to preview</summary>
-
 | bloom                                          | catppuccin                                     | dracula                                       |
 | :--------------------------------------------- | :--------------------------------------------- | :-------------------------------------------- |
 | ![bloom](https://i.imgur.com/m0F9ZsP.png)      | ![catppuccin](https://i.imgur.com/x2J3zFt.png) | ![dracula](https://i.imgur.com/tDZ8VmE.png)   |
@@ -39,8 +41,6 @@ penguinRice is for people who want to use a simple but fully functional Linux se
 | ![monochrome](https://i.imgur.com/y3tnFkw.png) | ![nord](https://i.imgur.com/CmhW7Jb.png)       | ![rosepine](https://i.imgur.com/16Y0WZT.png)  |
 | snowy                                          | tokyonight                                     | vaporwave                                     |
 | ![snowy](https://i.imgur.com/YnxsCFS.png)      | ![tokyonight](https://i.imgur.com/DgYvmt4.png) | ![vaporwave](https://i.imgur.com/xyvSKMN.png) |
-
-</details>
 
 # Installation
 ## Distros
@@ -63,6 +63,9 @@ curl -LO https://raw.githubusercontent.com/Haruzona/penguinRice/main/penguinrice
 bash penguinrice-linux.sh
 ```
 
+## Install manually
+Read [penguinDotfiles's README](https://github.com/Haruzona/penguinDotfiles) for more information
+
 ## Some notes
 - If your system doesn't have `bash`, install it
 - Tested on latest Arch Linux, Fedora 38, Debian 12, Ubuntu 23.04, OpenSUSE Tumbleweed, latest Void Linux.
@@ -72,11 +75,29 @@ bash penguinrice-linux.sh
 startx
 ```
 
+# Keybindings
+These are the basic keybinds. Read through the `bspwm/config/keys` file for more keybinds like increasing gaps and restoring gaps.
+> Note: Super = Windows key
+
+| Keys                                              | Function                          |
+| `Super + Enter`                                   | Launch terminal (alacritty)       |
+| `Super + Q`                                       | Close window                      |
+| `Super + Alt + R`                                 | Restart window manager (bspwm)    |
+| `Super + D`                                       | Open launcher (rofi)              |
+| `Super + BackSpace`                               | Open powermenu                    |
+| `Super + X`                                       | Open menu                         |
+| `Super + Tab`                                     | Open window menu                  |
+| `Super + Shift + C`                               | Open colorscheme changer          |
+| `Super + Delete`                                  | Screenshot menu                   |
+| `Super + Shift + B`                               | Toggle bar (polybar)              |
+| `Super + Shift + P`                               | Toggle compositor (picom)         |
+| `Super + T/Shift + T/F/S/`                        | Tile/Pseudo Tile/Float/Fullscreen |
+| `Super + R`                                       | Rotate window                     |
+| `Super + H/J/K/L or Left/Down/Up/Right`           | Change Focus                      |
+| `Super + Shift + H/J/K/L or Left/Down/Up/Right`   | Move window                       |
+
 # Credits
 - [Contributors](https://github.com/Haruzona/penguinRice/graphs/contributors)
 - Some people on Discord
 
-# Contributions
-1. Fork this project.
-2. Edit files
-3. Make a pull request.
+<h1 align="center">🌟 Good Luck and Seeya! 🌟</h1>
