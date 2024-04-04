@@ -1,5 +1,5 @@
-<h1 align="center>✨ penguinRice ✨ </h1>
-📜 A script that rice your Linux/*nix system.
+<h1 align="center">✨ penguinRice ✨ </h1>
+<p align="center">📜 A script that rice your Linux/*nix system.</p>
 
 <p align="center">
     <a href="https://github.com/Haruzona/penguinRice/stargazers"><img src="https://img.shields.io/github/stars/Haruzona/penguinRice?style=for-the-badge&color=%23ff8989"></a>
