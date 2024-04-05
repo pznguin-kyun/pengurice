@@ -1,4 +1,4 @@
-<h1 align="center">✨ penguinRice ✨ </h1>
+<h1 align="center"><b>✨ penguinRice ✨ </b></h1>
 <p align="center">📜 A script that rice your Linux/*nix system.</p>
 
 <p align="center">
@@ -8,7 +8,7 @@
     <a href="https://github.com/Haruzona/penguinRice/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Haruzona/penguinRice?style=for-the-badge&color=%23f2ff8a"></a>
 </p>
 
-# Table of Contents
+# **Table of Contents**
 - [About ⁉️](#about-)
 - [Starring 🌠](#starring-)
 - [Gallery 📷](#gallery-)
@@ -16,11 +16,11 @@
 - [Keybindings ⌨️](#keybindings-)
 - [Credits 👨‍🔧](#credits-)
 
-# About ⁉️
+# **About ⁉️**
 ## Hello! Thanks for dropping by 👋
 This is penguinRice, a script that automatically rice your Linux system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
-# Starring 🌠
+# **Starring 🌠**
 - [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles): default dotfiles
 - [bspwm ⚽](https://github.com/baskerville/bspwm): window manager
 - [alacritty ❤️](https://alacritty.org/): terminal
@@ -35,7 +35,7 @@ This is penguinRice, a script that automatically rice your Linux system. I made 
 and so on!
 
 
-# Gallery 📷
+# **Gallery 📷**
 | bloom                                          | catppuccin                                     | dracula                                       |
 | :--------------------------------------------- | :--------------------------------------------- | :-------------------------------------------- |
 | ![bloom](https://i.imgur.com/m0F9ZsP.png)      | ![catppuccin](https://i.imgur.com/x2J3zFt.png) | ![dracula](https://i.imgur.com/tDZ8VmE.png)   |
@@ -46,7 +46,7 @@ and so on!
 | snowy                                          | tokyonight                                     |
 | ![snowy](https://i.imgur.com/YnxsCFS.png)      | ![tokyonight](https://i.imgur.com/DgYvmt4.png) |
 
-# Installation 🛠️
+# **Installation 🛠️**
 ## Distros
 - Arch Linux and Arch-based distros (EndeavourOS, Artix Linux, Arco Linux, ArchCraft, ...)
 - RedHat-based distros (RHEL, Fedora, Nobara, ...)
@@ -79,7 +79,7 @@ Read [penguinDotfiles's README](https://github.com/Haruzona/penguinDotfiles) for
 startx
 ```
 
-# Keybindings ⌨️
+# **Keybindings ⌨️**
 These are the basic keybinds. Read through the `bspwm/config/keys` file for more keybinds like increasing gaps and restoring gaps.
 > Note: Super = Windows key
 
@@ -101,8 +101,8 @@ These are the basic keybinds. Read through the `bspwm/config/keys` file for more
 | `Super + H/J/K/L or Left/Down/Up/Right`           | Change Focus                      |
 | `Super + Shift + H/J/K/L or Left/Down/Up/Right`   | Move window                       |
 
-# Credits 👨‍🔧
+# **Credits 👨‍🔧**
 - [Contributors](https://github.com/Haruzona/penguinRice/graphs/contributors)
 - Some people on Discord
 
-<h1 align="center">🌟 Good Luck and Seeya! 🌟</h1>
+<h1 align="center"><b>🌟 Good Luck and Seeya! 🌟</b></h1>
