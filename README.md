@@ -21,16 +21,16 @@
 This is penguinRice, a script that automatically rice your Linux system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
 # Starring 🌠
-- [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles) as default dotfiles
-- [bspwm ⚽](https://github.com/baskerville/bspwm) as window manager
-- [alacritty ❤️](https://alacritty.org/) as default terminal
-- [librewolf 🦊](https://librewolf.net/) as browser
-- [ranger](https://ranger.github.io/) and [nemo](https://github.com/linuxmint/nemo) as file manager
-- [neovim](https://neovim.io) as editor
-- [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) as music player
-- [calcurse](https://www.calcurse.org/) as calendar
-- [newsboat](https://newsboat.org/) as news reader
-- [htop](https://htop.dev) as system monitor
+- [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles): default dotfiles
+- [bspwm ⚽](https://github.com/baskerville/bspwm): window manager
+- [alacritty ❤️](https://alacritty.org/): terminal
+- [librewolf 🦊](https://librewolf.net/): browser
+- [ranger](https://ranger.github.io/) and [nemo](https://github.com/linuxmint/nemo): file manager
+- [neovim](https://neovim.io): editor
+- [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp): music player
+- [calcurse](https://www.calcurse.org/): calendar
+- [newsboat](https://newsboat.org/): news reader
+- [htop](https://htop.dev): system monitor
 
 and so on!
 
