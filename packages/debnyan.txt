@@ -5,6 +5,7 @@ brightnessctl
 calcurse
 dunst
 feh
+fonts-firacode
 fonts-noto
 fonts-noto-cjk
 fonts-noto-color-emoji

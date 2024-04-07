@@ -5,6 +5,7 @@ brightnessctl
 calcurse
 dunst
 feh
+fira-code-fonts
 galculator
 git
 gtk2-engine-murrine
@@ -17,7 +18,6 @@ gvfs
 htop
 i3lock
 ImageMagick
-iosevka-fonts
 lxappearance
 libnotify
 librewolf

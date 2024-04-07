@@ -44,7 +44,7 @@ rofi
 sed
 sxhkd
 sudo
-ttc-iosevka
+ttf-fira-code
 ttf-roboto
 udisks2
 ueberzug
