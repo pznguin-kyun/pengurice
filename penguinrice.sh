@@ -171,6 +171,7 @@ prepare_user_folders(){
         passwd "$username"
     fi
     mkdir -p /home/"$username"/
+    sudo -u "$username" xdg-user-dirs-update
 }
 
 clone_dotfiles(){
