@@ -15,6 +15,8 @@
 - [Installation 🛠️](#installation-)
 - [Keybindings ⌨️](#keybindings-)
 - [Credits 👨‍🔧](#credits-)
+- [Support 💝](#support-)
+- [License](#license)
 
 # **About ⁉️**
 ## Hello! Thanks for dropping by 👋
@@ -104,5 +106,13 @@ These are the basic keybinds. Read through the `bspwm/config/keys` file for more
 # **Credits 👨‍🔧**
 - [Contributors](https://github.com/Haruzona/penguinRice/graphs/contributors)
 - Some people on Discord
+
+# **Support 💝**
+If you like my project and would like to support & appreciate it via donation then I'll gladly accept it.
+- [☕Ko-fi](https://ko-fi.com/p3nguinkun)
+- [💳 PayPal](https://paypal.me/p3nguinkun)
+
+# **License**
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
 <h1 align="center"><b>🌟 Good Luck and Seeya! 🌟</b></h1>
