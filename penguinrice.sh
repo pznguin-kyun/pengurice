@@ -64,7 +64,7 @@ adduser(){
         echo "$username" "does not exist"
         echo "Creating new user"
         useradd -m -g wheel -s /usr/bin/zsh "$username" >/dev/null 2>&1 ||
-		usermod -a -G wheel "$username" && mkdir -p /home/"$username" && chown "$name":wheel /home/"$name"
+		usermod -a -G wheel,video,audio,input,power,storage,optical,lp,scanner,dbus,uucp "$username" && mkdir -p /home/"$username" && chown "$name":wheel /home/"$name"
         passwd "$username"
     fi
     sudo -u "$username" xdg-user-dirs-update
@@ -242,25 +242,31 @@ EndSection' >/etc/X11/xorg.conf.d/40-libinput.conf
 }
 
 enable_services(){
-    if command -v systemctl &>/dev/null; then
-        logo "Enabling services"
-        systemctl enable NetworkManager
-        systemctl disable NetworkManager-wait-online.service
-        sudo -u "$username" systemctl --user enable pipewire.service
-        sudo -u "$username" systemctl --user enable pipewire-pulse.service
-        sudo -u "$username" systemctl --user enable wireplumber.service
-    elif command -v loginctl &>/dev/null; then
-        if [ -d /etc/sv ]; then
-            ln -s /etc/sv/NetworkManager /var/service/
-            ln -s /etc/sv/elogind /var/service/
-            ln -s /etc/sv/dbus /var/service/
-        elif [ -d /etc/runit/sv ]; then
-            ln -s /etc/runit/sv/NetworkManager /run/runit/service/
-            ln -s /etc/runit/sv/elogind /run/runit/service/
-            ln -s /etc/runit/sv/dbus /run/runit/service/
-            ln -s /etc/runit/sv/backlight /run/runit/service/
-        fi
-    fi
+    logo "Enabling services"
+    case "$(readlink -f /sbin/init)" in
+        *systemd*)
+            systemctl enable NetworkManager
+            systemctl disable NetworkManager-wait-online.service
+            sudo -u "$username" systemctl --user enable pipewire.service
+            sudo -u "$username" systemctl --user enable pipewire-pulse.service
+            sudo -u "$username" systemctl --user enable wireplumber.service
+        ;;
+        *runit*)
+            case "$distro" in
+                nyarch) pacman -Sy --needed --noconfirm networkmanager-runit backlight-runit
+            esac
+            if command -v loginctl &>/dev/null; then
+                ln -s /etc/sv/NetworkManager /var/service/
+                ln -s /etc/sv/elogind /var/service/
+                ln -s /etc/sv/dbus /var/service/
+            elif [ -d /etc/runit/sv ]; then
+                ln -s /etc/runit/sv/NetworkManager /run/runit/service/
+                ln -s /etc/runit/sv/elogind /run/runit/service/
+                ln -s /etc/runit/sv/dbus /run/runit/service/
+                ln -s /etc/runit/sv/backlight /run/runit/service/
+            fi
+        ;;
+    esac
 }
 
 finalize(){
