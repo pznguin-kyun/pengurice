@@ -96,7 +96,11 @@ setup_before_install(){
 		    pacman -Sy --noconfirm >/dev/null
 		    pacman-key --populate archlinux >/dev/null ;;
         esac
-        git clone https://aur.archlinux.org/yay-bin.git /tmp/aur && chmod 777 /tmp/aur && cd /tmp/aur && sudo -u "$username" makepkg -si --noconfirm && cd
+        if command -v yay &>/dev/null; then
+            return
+        else
+            rm -rf /tmp/aur && git clone https://aur.archlinux.org/yay-bin.git /tmp/aur && chmod 777 /tmp/aur && cd /tmp/aur && sudo -u "$username" makepkg -si --noconfirm && cd
+        fi
     ;;
     debnyan)
         apt install -y curl git wget gnupg lsb-release apt-transport-https ca-certificates
@@ -238,9 +242,16 @@ enable_services(){
         sudo -u "$username" systemctl --user enable pipewire-pulse.service
         sudo -u "$username" systemctl --user enable wireplumber.service
     elif command -v loginctl &>/dev/null; then
-        ln -s /etc/sv/NetworkManager /var/service/
-        ln -s /etc/sv/elogind /var/service/
-        ln -s /etc/sv/dbus /var/service/
+        if [ -d /etc/sv ]; then
+            ln -s /etc/sv/NetworkManager /var/service/
+            ln -s /etc/sv/elogind /var/service/
+            ln -s /etc/sv/dbus /var/service/
+        elif [ -d /etc/runit/sv ]; then
+            ln -s /etc/runit/sv/NetworkManager /run/runit/service/
+            ln -s /etc/runit/sv/elogind /run/runit/service/
+            ln -s /etc/runit/sv/dbus /run/runit/service/
+            ln -s /etc/runit/sv/backlight /run/runit/service/
+        fi
     fi
 }
 
