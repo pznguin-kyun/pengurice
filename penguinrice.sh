@@ -32,6 +32,17 @@ if [ ! "$(id -u)" = 0 ]; then
 fi
 }
 
+bootstraps(){
+    # Allow user to run sudo without password. Since AUR programs must be installed
+    # in a fakeroot environment, this is required for all builds with AUR.
+    trap 'rm -f /etc/sudoers.d/penguinrice-temp' HUP INT QUIT TERM PWR EXIT
+    echo "%wheel ALL=(ALL) NOPASSWD: ALL
+Defaults:%wheel runcwd=*" > /etc/sudoers.d/penguinrice-temp
+    
+    # dbus UUID must be generated for Artix runit.
+    dbus-uuidgen >/var/lib/dbus/machine-id
+}
+
 intro(){
     logo "Welcome!"
 printf '%s%sWelcome to penguinRice!\nThis script will automatically install fully-featured tiling window manager-based system on any Linux system.\nMy dotfiles DO NOT modify any of your system configuration.\nYou will be prompted for your root password to install missing dependencies.\nThis script doesnt have potential power to break your system, it only copies files from my repo to your HOME directory. %s\n\n' "${BLD}" "${CRE}" "${CNC}"
@@ -45,8 +56,18 @@ while true; do
 done
 }
 
-read_username(){
+adduser(){
     read -rp "First, type your username here: " username
+    if [ ! "$(id -u "$username" > /dev/null)" ]; then
+        echo "$username" "exists"
+    else
+        echo "$username" "does not exist"
+        echo "Creating new user"
+        useradd -m -g wheel -s /usr/bin/zsh "$username" >/dev/null 2>&1 ||
+		usermod -a -G wheel "$username" && mkdir -p /home/"$username" && chown "$name":wheel /home/"$name"
+        passwd "$username"
+    fi
+    sudo -u "$username" xdg-user-dirs-update
 }
 
 check_distro(){
@@ -164,19 +185,6 @@ install_pkgs(){
     esac
 }
 
-prepare_user_folders(){
-    logo "Preparing user and folders"
-    if [ ! "$(id -u "$username" > /dev/null)" ]; then
-        echo "$username" "exists"
-    else
-        echo "$username" "does not exist"
-        echo "Creating new user"
-        useradd -m "$username"
-        passwd "$username"
-    fi
-    mkdir -p /home/"$username"/
-    sudo -u "$username" xdg-user-dirs-update
-}
 
 clone_dotfiles(){
     dotfiles_dir="/tmp/dotfiles"
@@ -255,18 +263,9 @@ enable_services(){
     fi
 }
 
-check_shell(){
-    awk -F: -v user="$username" '$1 == user {print $NF}' /etc/passwd
-}
-
-change_shell(){
-    logo "Changing shell to zsh"
-    if [ "$(check_shell)" != "/usr/bin/zsh" ]; then
-	    echo "Changing shell to zsh"
-	    chsh -s /usr/bin/zsh "$username"
-    else
-	    echo -e "Your shell is already zsh\n" "${BLD}" "${CGR}" "${CNC}"
-    fi
+finalize(){
+    # Allow wheel users to sudo with password and allow several system commands
+    echo "%wheel ALL=(ALL:ALL) ALL" >/etc/sudoers.d/00-penguinrice-wheel-can-sudo
 }
 
 complete_msg(){
@@ -296,9 +295,9 @@ reboot_msg(){
 # main
 main(){
     root_checking
+    bootstraps
     intro
-    read_username
-    prepare_user_folders
+    adduser
     check_distro
     update
     setup_before_install
@@ -308,7 +307,7 @@ main(){
     install_dotfiles
     config_smth
     enable_services
-    change_shell
+    finalize
     complete_msg
 }
 
