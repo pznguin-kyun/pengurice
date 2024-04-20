@@ -255,7 +255,7 @@ enable_services(){
             case "$distro" in
                 nyarch) pacman -Sy --needed --noconfirm networkmanager-runit backlight-runit
             esac
-            if command -v loginctl &>/dev/null; then
+            if [ -d /etc/sv ]; then
                 ln -s /etc/sv/NetworkManager /var/service/
                 ln -s /etc/sv/elogind /var/service/
                 ln -s /etc/sv/dbus /var/service/
