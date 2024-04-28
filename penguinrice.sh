@@ -60,6 +60,7 @@ adduser(){
     read -rp "First, type your username here: " username
     if [ ! "$(id -u "$username" > /dev/null)" ]; then
         echo "$username" "exists"
+        [ $(awk -F: -v user="$username" '$1 == user {print $NF}' /etc/passwd) != "/usr/bin/zsh" ] && chsh -s /usr/bin/zsh "$username"
     else
         echo "$username" "does not exist"
         echo "Creating new user"
@@ -124,26 +125,13 @@ setup_before_install(){
         fi
     ;;
     debnyan)
-        apt install -y curl git wget gnupg lsb-release apt-transport-https ca-certificates
-        distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then lsb_release -sc; else echo focal; fi)
-        wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
-        sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
-Types: deb
-URIs: https://deb.librewolf.net
-Suites: $distro
-Components: main
-Architectures: amd64
-Signed-By: /usr/share/keyrings/librewolf.gpg
-EOF
-        apt update
-        ;;
+        apt install -y curl git ;;
     vowoid)
         xbps-install -Sy curl git ;;
     fedornya)
         dnf install curl git
         dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm -y
         dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm -y 
-        dnf config-manager --add-repo https://rpm.librewolf.net/librewolf-repo.repo
         ;;
     sus) 
         zypper in -y curl git
@@ -162,9 +150,6 @@ EOF
     			    zypper dup --from packman --allow-vendor-change -y ;;
     		esac
         fi
-        rpm --import https://rpm.librewolf.net/pubkey.gpg
-        zypper ar -ef https://rpm.librewolf.net librewolf
-        zypper ref
     ;;
   esac
 }
@@ -178,7 +163,6 @@ install_pkgs(){
         fedornya) xargs -a /tmp/"$distro".txt dnf install -y --allowerasing ;;
         nyarch) 
             xargs -a /tmp/"$distro".txt pacman -Sy --noconfirm --needed
-            sudo -u "$username" yay -S --noconfirm --needed librewolf-bin
         ;;
         sus) xargs -a /tmp/"$distro".txt zypper in -y ;;
         vowoid) xargs -a /tmp/"$distro".txt xbps-install -Sy ;;
@@ -272,6 +256,7 @@ enable_services(){
 finalize(){
     # Allow wheel users to sudo with password and allow several system commands
     echo "%wheel ALL=(ALL:ALL) ALL" >/etc/sudoers.d/00-penguinrice-wheel-can-sudo
+    echo "%wheel ALL=(ALL:ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/poweroff,/usr/bin/reboot,/usr/bin/systemctl,/usr/bin/loginctl,/usr/bin/wifi-menu,/usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys" >/etc/sudoers.d/01-penguinrice-cmds-without-password
 }
 
 complete_msg(){

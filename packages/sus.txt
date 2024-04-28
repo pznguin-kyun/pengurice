@@ -6,6 +6,7 @@ calcurse
 dunst
 feh
 fira-code-fonts
+firefox
 galculator
 git
 gtk2-engine-murrine
@@ -20,7 +21,6 @@ i3lock
 ImageMagick
 lxappearance
 libnotify
-librewolf
 maim
 mpd
 mpv

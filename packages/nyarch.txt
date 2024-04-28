@@ -5,6 +5,7 @@ brightnessctl
 calcurse
 dunst
 feh
+firefox
 galculator
 git
 gtk-engine-murrine

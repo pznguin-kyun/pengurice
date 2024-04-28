@@ -22,7 +22,6 @@ i3lock
 imagemagick
 lxappearance
 libnotify-bin
-librewolf
 maim
 mpc
 mpd
