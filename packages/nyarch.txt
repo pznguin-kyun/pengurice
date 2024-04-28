@@ -46,7 +46,6 @@ sed
 sxhkd
 sudo
 ttf-fira-code
-ttf-roboto
 udisks2
 ueberzug
 unzip

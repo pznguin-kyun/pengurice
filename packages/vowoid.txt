@@ -8,7 +8,6 @@ elogind
 feh
 firefox
 font-firacode
-fonts-roboto-ttf
 galculator
 git
 gtk-engine-murrine

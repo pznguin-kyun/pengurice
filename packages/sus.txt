@@ -14,7 +14,6 @@ google-noto-coloremoji-fonts
 google-noto-fonts
 google-noto-sans-cjk-fonts
 google-noto-serif-cjk-fonts
-google-roboto-fonts
 gvfs
 htop
 i3lock
