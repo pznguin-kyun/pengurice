@@ -26,7 +26,7 @@ This is penguinRice, a script that automatically rice your Linux system. I made 
 - [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles): default dotfiles
 - [bspwm ⚽](https://github.com/baskerville/bspwm): window manager
 - [alacritty ❤️](https://alacritty.org/): terminal
-- [librewolf 🦊](https://librewolf.net/): browser
+- [firefox 🦊](https://www.mozilla.org/en-US/firefox/): browser
 - [ranger](https://ranger.github.io/) and [nemo](https://github.com/linuxmint/nemo): file manager
 - [neovim](https://neovim.io): editor
 - [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp): music player
