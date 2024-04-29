@@ -121,7 +121,7 @@ setup_before_install(){
         if command -v yay &>/dev/null; then
             return
         else
-            rm -rf /tmp/aur && git clone https://aur.archlinux.org/yay-bin.git /tmp/aur && chmod 777 /tmp/aur && cd /tmp/aur && sudo -u "$username" makepkg -si --noconfirm && cd
+            rm -rf /tmp/aur; git clone https://aur.archlinux.org/yay-bin.git /tmp/aur; chmod 777 /tmp/aur; cd /tmp/aur; sudo -u "$username" makepkg -si --noconfirm; cd
         fi
     ;;
     debnyan)
