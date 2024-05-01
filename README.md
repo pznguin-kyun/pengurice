@@ -23,6 +23,8 @@
 This is penguinRice, a script that automatically rice your Linux system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
 # **Starring 🌠**
+<img src="https://i.imgur.com/cajwJ7I.png" align="right" width="400px">
+
 - [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles): default dotfiles
 - [bspwm ⚽](https://github.com/baskerville/bspwm): window manager
 - [alacritty ❤️](https://alacritty.org/): terminal
