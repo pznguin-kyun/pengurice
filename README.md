@@ -12,7 +12,7 @@
 - [About ⁉️](#about-)
 - [Starring 🌠](#starring-)
 - [Gallery 📷](#gallery-)
-- [Installation 🛠️](#installation-)
+- [Installation 🛠️](#installation-%EF%B8%8F)
 - [Keybindings ⌨️](#keybindings-)
 - [Credits 👨‍🔧](#credits-)
 - [Support 💝](#support-)
