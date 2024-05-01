@@ -9,11 +9,11 @@
 </p>
 
 # **Table of Contents**
-- [About ⁉️](#about-)
+- [About ⁉️](#about-%EF%B8%8F)
 - [Starring 🌠](#starring-)
 - [Gallery 📷](#gallery-)
 - [Installation 🛠️](#installation-%EF%B8%8F)
-- [Keybindings ⌨️](#keybindings-)
+- [Keybindings ⌨️](#keybindings-%EF%B8%8F)
 - [Credits 👨‍🔧](#credits-)
 - [Support 💝](#support-)
 - [License](#license)
