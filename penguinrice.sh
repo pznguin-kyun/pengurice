@@ -109,6 +109,14 @@ setup_before_install(){
     case "$distro" in
     nyarch)
         pacman -Sy --noconfirm --needed curl git base-devel
+        if ! command -v yay &>/dev/null; then
+            rm -rf /tmp/aur 
+            git clone https://aur.archlinux.org/yay-bin.git /tmp/aur
+            chmod 777 /tmp/aur
+            cd /tmp/aur
+            sudo -u "$username" makepkg -si --noconfirm
+            cd
+        fi
         case "$(readlink -f /sbin/init)" in
 	      *systemd*) return ;;
 	      *)
@@ -118,16 +126,6 @@ setup_before_install(){
 		    pacman -Sy --noconfirm >/dev/null
 		    pacman-key --populate archlinux >/dev/null ;;
         esac
-        if command -v yay &>/dev/null; then
-            return
-        else
-            rm -rf /tmp/aur 
-            git clone https://aur.archlinux.org/yay-bin.git /tmp/aur
-            chmod 777 /tmp/aur
-            cd /tmp/aur
-            sudo -u "$username" makepkg -si --noconfirm
-            cd
-        fi
     ;;
     debnyan)
         apt install -y curl git ;;
