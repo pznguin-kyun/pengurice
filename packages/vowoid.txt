@@ -28,7 +28,6 @@ nemo
 neofetch
 neovim
 NetworkManager
-newsboat
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-ttf

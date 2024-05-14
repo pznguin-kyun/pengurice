@@ -64,8 +64,8 @@ adduser(){
     else
         echo "$username" "does not exist"
         echo "Creating new user"
-        useradd -m -g wheel -s /usr/bin/zsh "$username" >/dev/null 2>&1 ||
-		usermod -a -G wheel,video,audio,input,power,storage,optical,lp,scanner,dbus,uucp "$username" && mkdir -p /home/"$username" && chown "$name":wheel /home/"$name"
+        useradd -m -g wheel "$username" >/dev/null 2>&1 ||
+		usermod -a -G wheel,video,audio,input,power,storage,optical,lp,scanner,dbus,uucp -s /usr/bin/zsh "$username" && mkdir -p /home/"$username" && chown "$name":wheel /home/"$name"
         passwd "$username"
     fi
     sudo -u "$username" xdg-user-dirs-update

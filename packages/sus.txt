@@ -28,7 +28,6 @@ nemo
 neofetch
 neovim
 NetworkManager
-newsboat
 pamixer
 papirus-icon-theme
 pavucontrol
