@@ -8,7 +8,6 @@
 # consts
 CRE=$(tput setaf 1)
 CYE=$(tput setaf 3)
-CGR=$(tput setaf 2)
 BLD=$(tput bold)
 CNC=$(tput sgr0)
 
@@ -16,9 +15,9 @@ CNC=$(tput sgr0)
 date=$(date +%Y%m%d-%H%M%S)
 git_repo="https://github.com/p3nguin-kun/penguinDotfiles"
 branch="bspwm"
+main_folder="main"
 
 # functions
-
 logo() {
 	local text="${1:?}"
 	# shellcheck disable=SC2183
@@ -35,7 +34,7 @@ fi
 bootstraps(){
     # Allow user to run sudo without password. Since AUR programs must be installed
     # in a fakeroot environment, this is required for all builds with AUR.
-    trap 'rm -f /etc/sudoers.d/penguinrice-temp' HUP INT QUIT TERM PWR EXIT
+    trap 'rm -f /etc/sudoers.d/penguinrice-temp'
     echo "%wheel ALL=(ALL) NOPASSWD: ALL
 Defaults:%wheel runcwd=*" > /etc/sudoers.d/penguinrice-temp
     
@@ -203,7 +202,7 @@ backup_dotfiles(){
 install_dotfiles(){
     logo "Installing dotfiles.."
     printf "Copying files to respective directories..\n"
-    cp -rfT /tmp/dotfiles/main/ /home/"$username"/
+    cp -rfT /tmp/dotfiles/"$main_folder"/ /home/"$username"/
     [ -d /tmp/bsp_backup ] && cp /tmp/bsp_backup /home/"$username"/.config/bspwm/user
     chown -R "$username":"$username" /home/"$username"
     fc-cache -fv
