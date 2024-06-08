@@ -52,6 +52,7 @@ xclip
 xdg-user-dirs-gtk
 xinit
 xorg
+xsettingsd
 xss-lock
 zathura
 zathura-pdf-mupdf

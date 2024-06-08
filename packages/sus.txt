@@ -50,6 +50,7 @@ xdg-user-dirs-gtk
 xinit
 xorg-x11-server
 xorg-x11-driver-video
+xsettingsd
 xss-lock
 zathura
 zathura-pdf-mupdf

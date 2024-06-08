@@ -52,6 +52,7 @@ xdg-user-dirs-gtk
 xinit
 xorg
 xserver-xorg
+xsettingsd
 xss-lock
 zathura
 zathura-pdf-poppler

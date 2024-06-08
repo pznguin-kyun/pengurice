@@ -54,6 +54,7 @@ xdg-user-dirs-gtk
 xorg
 xorg-drivers
 xorg-xinit
+xsettingsd
 xss-lock
 zathura
 zathura-pdf-mupdf
