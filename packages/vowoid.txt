@@ -7,7 +7,6 @@ dunst
 elogind
 feh
 firefox
-font-firacode
 galculator
 git
 gtk-engine-murrine

@@ -44,7 +44,6 @@ rofi
 sed
 sxhkd
 sudo
-ttf-fira-code
 udisks2
 ueberzug
 unzip

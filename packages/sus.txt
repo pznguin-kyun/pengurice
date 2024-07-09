@@ -5,7 +5,6 @@ brightnessctl
 calcurse
 dunst
 feh
-fira-code-fonts
 firefox
 galculator
 git
