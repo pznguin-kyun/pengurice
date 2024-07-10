@@ -259,6 +259,7 @@ finalize(){
     # Allow wheel users to sudo with password and allow several system commands
     echo "%wheel ALL=(ALL:ALL) ALL" >/etc/sudoers.d/00-penguinrice-wheel-can-sudo
     echo "%wheel ALL=(ALL:ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/poweroff,/usr/bin/reboot,/usr/bin/systemctl,/usr/bin/loginctl,/usr/bin/wifi-menu,/usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys" >/etc/sudoers.d/01-penguinrice-cmds-without-password
+    rm -rf /etc/sudoers.d/penguinrice-temp
 }
 
 complete_msg(){
