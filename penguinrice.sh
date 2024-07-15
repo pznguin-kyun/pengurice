@@ -53,21 +53,8 @@ while true; do
 	*) break ;;
 	esac
 done
-}
 
-adduser(){
-    read -rp "First, type your username here: " username
-    if [ ! "$(id -u "$username" > /dev/null)" ]; then
-        echo "$username" "exists"
-        [ $(awk -F: -v user="$username" '$1 == user {print $NF}' /etc/passwd) != "/usr/bin/zsh" ] && chsh -s /usr/bin/zsh "$username"
-    else
-        echo "$username" "does not exist"
-        echo "Creating new user"
-        useradd -m -g wheel "$username" >/dev/null 2>&1 ||
-		usermod -a -G wheel,video,audio,input,power,storage,optical,lp,scanner,dbus,uucp -s /usr/bin/zsh "$username" && mkdir -p /home/"$username" && chown "$name":wheel /home/"$name"
-        passwd "$username"
-    fi
-    sudo -u "$username" xdg-user-dirs-update
+read -rp "First, type your username here: " username
 }
 
 check_distro(){
@@ -171,6 +158,21 @@ install_pkgs(){
     esac
 }
 
+
+setup_user(){
+    if [ ! "$(id -u "$username" > /dev/null)" ]; then
+        echo "$username" "exists"
+        usermod -aG wheel,video,audio,input,power,storage,optical,lp,scanner,dbus,uucp "$username"
+        [ $(awk -F: -v user="$username" '$1 == user {print $NF}' /etc/passwd) != "/usr/bin/zsh" ] && chsh -s /usr/bin/zsh "$username"
+    else
+        echo "$username" "does not exist"
+        echo "Creating new user"
+        useradd -m -g wheel "$username" >/dev/null 2>&1 ||
+		usermod -aG wheel,video,audio,input,power,storage,optical,lp,scanner,dbus,uucp -s /usr/bin/zsh "$username" && mkdir -p /home/"$username" && chown "$name":wheel /home/"$name"
+        passwd "$username"
+    fi
+    sudo -u "$username" xdg-user-dirs-update
+}
 
 clone_dotfiles(){
     dotfiles_dir="/tmp/dotfiles"
@@ -291,11 +293,11 @@ main(){
     root_checking
     bootstraps
     intro
-    adduser
     check_distro
     update
     setup_before_install
     install_pkgs
+    setup_user
     clone_dotfiles
     backup_dotfiles
     install_dotfiles
