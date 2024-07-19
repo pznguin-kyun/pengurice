@@ -35,6 +35,7 @@ papirus-icon-theme
 pavucontrol
 picom
 pipewire
+polkit-gnome
 polybar
 pulseaudio
 ranger

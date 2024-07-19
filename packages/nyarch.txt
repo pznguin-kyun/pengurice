@@ -37,6 +37,7 @@ pavucontrol
 picom
 pipewire
 pipewire-pulse
+polkit-gnome
 polybar
 ranger
 redshift
