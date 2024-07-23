@@ -60,15 +60,15 @@ and so on!
 
 ## Install with git
 ```
-git clone --depth 1 https://github.com/Haruzona/pengurice
-cd pengurice
-./pengurice.sh
+$ git clone --depth 1 https://github.com/Haruzona/pengurice
+$ cd pengurice
+# ./pengurice.sh
 ```
 
 ## Install with curl
 ```
-curl -LO https://raw.githubusercontent.com/Haruzona/pengurice/main/pengurice.sh
-bash pengurice.sh
+$ curl -LO https://raw.githubusercontent.com/Haruzona/pengurice/main/pengurice.sh
+# bash pengurice.sh
 ```
 
 ## Install manually
