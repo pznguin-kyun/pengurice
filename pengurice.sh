@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# penguinRice: p3nguin-kun's auto rice script
+# pengurice: p3nguin-kun's auto rice script
 # by p3nguin-kun <p3nguinkun@proton.me>
 # See LICENSE file for copyright and license details.
 # To understand everything else, start reading main().
@@ -36,7 +36,7 @@ bootstraps(){
     # in a fakeroot environment, this is required for all builds with AUR.
     trap 'rm -f /etc/sudoers.d/penguinrice-temp'
     echo "%wheel ALL=(ALL) NOPASSWD: ALL
-Defaults:%wheel runcwd=*" > /etc/sudoers.d/penguinrice-temp
+Defaults:%wheel runcwd=*" > /etc/sudoers.d/pengurice-temp
     
     # dbus UUID must be generated for Artix runit.
     dbus-uuidgen >/var/lib/dbus/machine-id
@@ -44,7 +44,7 @@ Defaults:%wheel runcwd=*" > /etc/sudoers.d/penguinrice-temp
 
 intro(){
     logo "Welcome!"
-printf '%s%sWelcome to penguinRice!\nThis script will automatically install fully-featured tiling window manager-based system on any Linux system.\nMy dotfiles DO NOT modify any of your system configuration.\nYou will be prompted for your root password to install missing dependencies.\nThis script doesnt have potential power to break your system, it only copies files from my repo to your HOME directory. %s\n\n' "${BLD}" "${CRE}" "${CNC}"
+printf '%s%sWelcome to pengurice!\nThis script will automatically install fully-featured tiling window manager-based system on any Linux system.\nMy dotfiles DO NOT modify any of your system configuration.\nYou will be prompted for your root password to install missing dependencies.\nThis script doesnt have potential power to break your system, it only copies files from my repo to your HOME directory. %s\n\n' "${BLD}" "${CRE}" "${CNC}"
 
 while true; do
 	read -rp " Do you want to continue? [Y/n]: " yn
@@ -146,7 +146,7 @@ setup_before_install(){
 install_pkgs(){
     logo "Installing packages"
     [ -f /tmp/"$distro".txt ] && rm -rf /tmp/"$distro".txt
-    curl -o /tmp/"$distro".txt https://raw.githubusercontent.com/p3nguin-kun/penguinRice/main/packages/"$distro".txt
+    curl -o /tmp/"$distro".txt https://raw.githubusercontent.com/p3nguin-kun/pengurice/main/packages/"$distro".txt
     case "$distro" in
         debnyan) xargs -a /tmp/"$distro".txt apt install -y ;;
         fedornya) xargs -a /tmp/"$distro".txt dnf install -y --allowerasing ;;
@@ -259,14 +259,14 @@ enable_services(){
 
 finalize(){
     # Allow wheel users to sudo with password and allow several system commands
-    echo "%wheel ALL=(ALL:ALL) ALL" >/etc/sudoers.d/00-penguinrice-wheel-can-sudo
-    echo "%wheel ALL=(ALL:ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/poweroff,/usr/bin/reboot,/usr/bin/systemctl,/usr/bin/loginctl,/usr/bin/wifi-menu,/usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys" >/etc/sudoers.d/01-penguinrice-cmds-without-password
-    rm -rf /etc/sudoers.d/penguinrice-temp
+    echo "%wheel ALL=(ALL:ALL) ALL" >/etc/sudoers.d/00-pengurice-wheel-can-sudo
+    echo "%wheel ALL=(ALL:ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/poweroff,/usr/bin/reboot,/usr/bin/systemctl,/usr/bin/loginctl,/usr/bin/wifi-menu,/usr/bin/mount,/usr/bin/umount,/usr/bin/loadkeys" >/etc/sudoers.d/01-pengurice-cmds-without-password
+    rm -rf /etc/sudoers.d/pengurice-temp
 }
 
 complete_msg(){
     logo "Done!"
-    echo -e "Thanks for using penguinRice!\n" "${BLD}" "${CYE}" "${CNC}"
+    echo -e "Thanks for using pengurice!\n" "${BLD}" "${CYE}" "${CNC}"
     echo -e "Before restart, you need to remember the following things:\n\n1. If you use Display Manager, choose 'bspwm' as session/desktop environment and log in.\n2. If you use tty, you just need to log in to your account.\n"
     while true; do
 	    read -rp "Do you want to restart now? [Y/n]: " yn2

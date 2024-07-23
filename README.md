@@ -1,11 +1,11 @@
-<h1 align="center"><b>✨ penguinRice ✨ </b></h1>
+<h1 align="center"><b>✨ pengurice ✨ </b></h1>
 <p align="center">📜 A script that rice your Linux/*nix system.</p>
 
 <p align="center">
-    <a href="https://github.com/Haruzona/penguinRice/stargazers"><img src="https://img.shields.io/github/stars/Haruzona/penguinRice?style=for-the-badge&color=%23ff8989"></a>
-    <a href="https://github.com/Haruzona/penguinRice/issues"><img src="https://img.shields.io/github/issues/Haruzona/penguinRice?style=for-the-badge&color=%23a978f6"></a>
-    <a href="https://github.com/Haruzona/penguinRice/pulls"><img src="https://img.shields.io/github/issues-pr/Haruzona/penguinRice?style=for-the-badge&color=%23a978f6"></a>
-    <a href="https://github.com/Haruzona/penguinRice/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Haruzona/penguinRice?style=for-the-badge&color=%23f2ff8a"></a>
+    <a href="https://github.com/Haruzona/pengurice/stargazers"><img src="https://img.shields.io/github/stars/Haruzona/pengurice?style=for-the-badge&color=%23ff8989"></a>
+    <a href="https://github.com/Haruzona/pengurice/issues"><img src="https://img.shields.io/github/issues/Haruzona/pengurice?style=for-the-badge&color=%23a978f6"></a>
+    <a href="https://github.com/Haruzona/pengurice/pulls"><img src="https://img.shields.io/github/issues-pr/Haruzona/pengurice?style=for-the-badge&color=%23a978f6"></a>
+    <a href="https://github.com/Haruzona/pengurice/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Haruzona/pengurice?style=for-the-badge&color=%23f2ff8a"></a>
 </p>
 
 # **Table of Contents**
@@ -20,12 +20,12 @@
 
 # **About ⁉️**
 ## Hello! Thanks for dropping by 👋
-This is penguinRice, a script that automatically rice your Linux system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
+This is pengurice, a script that automatically rice your Linux system. I made this for people who wants a simple, productive and eyecandy Linux desktop.
 
 # **Starring 🌠**
 <img src="https://i.imgur.com/cajwJ7I.png" align="right" width="400px">
 
-- [penguinDotfiles](https://github.com/Haruzona/penguinDotfiles): default dotfiles
+- [pengudotfiles](https://github.com/Haruzona/pengudotfiles): default dotfiles
 - [bspwm ⚽](https://github.com/baskerville/bspwm): window manager
 - [alacritty ❤️](https://alacritty.org/): terminal
 - [firefox 🦊](https://www.mozilla.org/en-US/firefox/): browser
@@ -60,19 +60,19 @@ and so on!
 
 ## Install with git
 ```
-git clone --depth 1 https://github.com/Haruzona/penguinRice
-cd penguinRice
-./penguinrice.sh
+git clone --depth 1 https://github.com/Haruzona/pengurice
+cd pengurice
+./pengurice.sh
 ```
 
 ## Install with curl
 ```
-curl -LO https://raw.githubusercontent.com/Haruzona/penguinRice/main/penguinrice.sh
-bash penguinrice-linux.sh
+curl -LO https://raw.githubusercontent.com/Haruzona/pengurice/main/pengurice.sh
+bash pengurice.sh
 ```
 
 ## Install manually
-Read [penguinDotfiles's README](https://github.com/Haruzona/penguinDotfiles) for more information
+Read [pengudotfiles's README](https://github.com/Haruzona/pengudotfiles) for more information
 
 ## Some notes
 - If your system doesn't have `bash`, install it.
@@ -106,7 +106,7 @@ These are the basic keybinds. Read through the `bspwm/config/keys` file for more
 | `Super + Shift + H/J/K/L or Left/Down/Up/Right`   | Move window                       |
 
 # **Credits 👨‍🔧**
-- [Contributors](https://github.com/Haruzona/penguinRice/graphs/contributors)
+- [Contributors](https://github.com/Haruzona/pengurice/graphs/contributors)
 - Some people on Discord
 
 # **Support 💝**
