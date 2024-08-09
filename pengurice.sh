@@ -118,6 +118,7 @@ setup_before_install(){
     vowoid)
         xbps-install -Sy curl git ;;
     fedornya)
+	printf "max_parallel_downloads=10\nfastestmirror=1" /etc/dnf/dnf.conf
         dnf install curl git
         dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm -y
         dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm -y 

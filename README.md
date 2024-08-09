@@ -2,10 +2,10 @@
 <p align="center">📜 A script that rice your Linux/*nix system.</p>
 
 <p align="center">
-    <a href="https://github.com/Haruzona/pengurice/stargazers"><img src="https://img.shields.io/github/stars/Haruzona/pengurice?style=for-the-badge&color=%23ff8989"></a>
-    <a href="https://github.com/Haruzona/pengurice/issues"><img src="https://img.shields.io/github/issues/Haruzona/pengurice?style=for-the-badge&color=%23a978f6"></a>
-    <a href="https://github.com/Haruzona/pengurice/pulls"><img src="https://img.shields.io/github/issues-pr/Haruzona/pengurice?style=for-the-badge&color=%23a978f6"></a>
-    <a href="https://github.com/Haruzona/pengurice/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Haruzona/pengurice?style=for-the-badge&color=%23f2ff8a"></a>
+    <a href="https://github.com/p3nguin-kun/pengurice/stargazers"><img src="https://img.shields.io/github/stars/p3nguin-kun/pengurice?style=for-the-badge&color=%23ff8989"></a>
+    <a href="https://github.com/p3nguin-kun/pengurice/issues"><img src="https://img.shields.io/github/issues/p3nguin-kun/pengurice?style=for-the-badge&color=%23a978f6"></a>
+    <a href="https://github.com/p3nguin-kun/pengurice/pulls"><img src="https://img.shields.io/github/issues-pr/p3nguin-kun/pengurice?style=for-the-badge&color=%23a978f6"></a>
+    <a href="https://github.com/p3nguin-kun/pengurice/blob/main/LICENSE"><img src="https://img.shields.io/github/license/p3nguin-kun/pengurice?style=for-the-badge&color=%23f2ff8a"></a>
 </p>
 
 # **Table of Contents**
@@ -25,7 +25,7 @@ This is pengurice, a script that automatically rice your Linux system. I made th
 # **Starring 🌠**
 <img src="https://i.imgur.com/cajwJ7I.png" align="right" width="400px">
 
-- [pengudotfiles](https://github.com/Haruzona/pengudotfiles): default dotfiles
+- [pengudotfiles](https://github.com/p3nguin-kun/pengudotfiles): default dotfiles
 - [bspwm ⚽](https://github.com/baskerville/bspwm): window manager
 - [alacritty ❤️](https://alacritty.org/): terminal
 - [firefox 🦊](https://www.mozilla.org/en-US/firefox/): browser
@@ -60,19 +60,19 @@ and so on!
 
 ## Install with git
 ```
-$ git clone --depth 1 https://github.com/Haruzona/pengurice
+$ git clone --depth 1 https://github.com/p3nguin-kun/pengurice
 $ cd pengurice
 # ./pengurice.sh
 ```
 
 ## Install with curl
 ```
-$ curl -LO https://raw.githubusercontent.com/Haruzona/pengurice/main/pengurice.sh
+$ curl -LO https://raw.githubusercontent.com/p3nguin-kun/pengurice/main/pengurice.sh
 # bash pengurice.sh
 ```
 
 ## Install manually
-Read [pengudotfiles's README](https://github.com/Haruzona/pengudotfiles) for more information
+Read [pengudotfiles's README](https://github.com/p3nguin-kun/pengudotfiles) for more information
 
 ## Some notes
 - If your system doesn't have `bash`, install it.
@@ -106,7 +106,7 @@ These are the basic keybinds. Read through the `bspwm/config/keys` file for more
 | `Super + Shift + H/J/K/L or Left/Down/Up/Right`   | Move window                       |
 
 # **Credits 👨‍🔧**
-- [Contributors](https://github.com/Haruzona/pengurice/graphs/contributors)
+- [Contributors](https://github.com/p3nguin-kun/pengurice/graphs/contributors)
 - Some people on Discord
 
 # **Support 💝**
