@@ -31,7 +31,7 @@ This is pengurice, a script that automatically rice your Linux system. I made th
 - [firefox 🦊](https://www.mozilla.org/en-US/firefox/): browser
 - [ranger](https://ranger.github.io/) and [nemo](https://github.com/linuxmint/nemo): file manager
 - [neovim](https://neovim.io): editor
-- [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp): music player
+- [cmus](https://cmus.github.io/): music player
 - [calcurse](https://www.calcurse.org/): calendar
 - [newsboat](https://newsboat.org/): news reader
 - [htop](https://htop.dev): system monitor

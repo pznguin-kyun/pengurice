@@ -3,6 +3,7 @@ arandr
 bspwm
 brightnessctl
 calcurse
+cmus
 dunst
 feh
 firefox
@@ -22,10 +23,7 @@ ImageMagick
 lxappearance
 libnotify
 maim
-mpc
-mpd
 mpv
-ncmpcpp
 nemo
 neovim
 neofetch

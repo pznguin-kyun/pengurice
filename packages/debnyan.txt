@@ -3,6 +3,7 @@ arandr
 bspwm
 brightnessctl
 calcurse
+cmus
 dunst
 feh
 fonts-noto
@@ -21,10 +22,7 @@ imagemagick
 lxappearance
 libnotify-bin
 maim
-mpc
-mpd
 mpv
-ncmpcpp
 nemo
 neovim
 neofetch
