@@ -47,7 +47,7 @@ intro(){
 printf '%s%sWelcome to pengurice!\nThis script will automatically install fully-featured tiling window manager-based system on any Linux system.\nMy dotfiles DO NOT modify any of your system configuration.\nYou will be prompted for your root password to install missing dependencies.\nThis script doesnt have potential power to break your system, it only copies files from my repo to your HOME directory. %s\n\n' "${BLD}" "${CRE}" "${CNC}"
 
 while true; do
-	read -rp " Do you want to continue? [Y/n]: " yn
+	read -rp "Do you want to continue? [Y/n]: " yn
 	case $yn in
 	[Nn]*) exit ;;
 	*) break ;;
@@ -149,14 +149,13 @@ install_pkgs(){
     [ -f /tmp/"$distro".txt ] && rm -rf /tmp/"$distro".txt
     curl -o /tmp/"$distro".txt https://raw.githubusercontent.com/p3nguin-kun/pengurice/main/packages/"$distro".txt
     case "$distro" in
-        debnyan) xargs -a /tmp/"$distro".txt apt install -y ;;
-        fedornya) xargs -a /tmp/"$distro".txt dnf install -y --allowerasing ;;
-        nyarch) 
-            xargs -a /tmp/"$distro".txt pacman -Sy --noconfirm --needed
-        ;;
-        sus) xargs -a /tmp/"$distro".txt zypper in -y ;;
-        vowoid) xargs -a /tmp/"$distro".txt xbps-install -Sy ;;
+        debnyan) install_command="apt install -y" ;;
+        fedornya) install_command="dnf install -y --allowerasing" ;;
+        nyarch) install_command="pacman -Sy --noconfirm --needed" ;;
+        sus) install_command="zypper in -y" ;;
+        vowoid) install_command="xbps-install -Sy" ;;
     esac
+    xargs -a /tmp/"$distro".txt $install_command
 }
 
 
