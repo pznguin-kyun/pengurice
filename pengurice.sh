@@ -13,7 +13,7 @@ CNC=$(tput sgr0)
 
 # vars
 date=$(date +%Y%m%d-%H%M%S)
-git_repo="https://github.com/p3nguin-kun/penguinDotfiles"
+git_repo="https://github.com/p3nguin-kun/pengudotfiles"
 branch="bspwm"
 main_folder="main"
 
