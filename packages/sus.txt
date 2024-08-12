@@ -2,6 +2,7 @@ alacritty
 arandr
 bspwm
 brightnessctl
+btop
 calcurse
 cmus
 dunst
@@ -15,9 +16,7 @@ google-noto-fonts
 google-noto-sans-cjk-fonts
 google-noto-serif-cjk-fonts
 gvfs
-htop
 i3lock
-ImageMagick
 lxappearance
 libnotify
 maim

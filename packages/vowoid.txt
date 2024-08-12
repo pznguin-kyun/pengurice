@@ -2,6 +2,7 @@ alacritty
 arandr
 bspwm
 brightnessctl
+btop
 calcurse
 cmus
 dunst
@@ -16,7 +17,6 @@ gvfs-afc
 gvfs-mtp
 gvfs-smb
 i3lock
-ImageMagick
 libnotify
 lxappearance
 maim
