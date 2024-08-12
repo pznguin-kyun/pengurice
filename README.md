@@ -33,8 +33,7 @@ This is pengurice, a script that automatically rice your Linux system. I made th
 - [neovim](https://neovim.io): editor
 - [cmus](https://cmus.github.io/): music player
 - [calcurse](https://www.calcurse.org/): calendar
-- [newsboat](https://newsboat.org/): news reader
-- [htop](https://htop.dev): system monitor
+- [btop](https://github.com/aristocratos/btop): system monitor
 
 and so on!
 
