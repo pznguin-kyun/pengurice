@@ -37,6 +37,7 @@ ranger
 redshift
 rofi
 sed
+sof-firmware
 sxhkd
 sudo
 udisks2
