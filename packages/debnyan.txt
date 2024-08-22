@@ -32,7 +32,7 @@ papirus-icon-theme
 pavucontrol
 picom
 pipewire
-policykit-gnome
+policykit-1-gnome
 polybar
 pulseaudio
 ranger
