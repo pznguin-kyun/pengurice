@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# pengurice: p3nguin-kun's auto rice script
-# by p3nguin-kun <p3nguinkun@proton.me>
+# pengurice: pznguin-kyun's auto rice script
+# by pznguin-kyun <p3nguinkun@proton.me>
 # See LICENSE file for copyright and license details.
 # To understand everything else, start reading main().
 
@@ -13,7 +13,7 @@ CNC=$(tput sgr0)
 
 # vars
 date=$(date +%Y%m%d-%H%M%S)
-git_repo="https://github.com/p3nguin-kun/pengudotfiles"
+git_repo="https://github.com/pznguin-kyun/pengudotfiles"
 branch="bspwm"
 main_folder="main"
 
@@ -147,7 +147,7 @@ setup_before_install(){
 install_pkgs(){
     logo "Installing packages"
     [ -f /tmp/"$distro".txt ] && rm -rf /tmp/"$distro".txt
-    curl -o /tmp/"$distro".txt https://raw.githubusercontent.com/p3nguin-kun/pengurice/main/packages/"$distro".txt
+    curl -o /tmp/"$distro".txt https://raw.githubusercontent.com/pznguin-kyun/pengurice/main/packages/"$distro".txt
     case "$distro" in
         debnyan) install_command="apt install -y" ;;
         fedornya) install_command="dnf install -y --allowerasing" ;;
